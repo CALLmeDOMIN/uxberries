@@ -1,5 +1,8 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import EtapProjektu from "../components/EtapProjektu.astro";
+
+import { etapyProjektu } from "../utils/data";
 ---
 
 <Layout title="UXberries">
@@ -19,4 +22,20 @@ import Layout from "../layouts/Layout.astro";
       </p>
     </div>
   </main>
-</Layout>
+  <section id="o-nas">
+    <h1>O nas</h1>
+  </section>
+  <section id="etapy-projektu" class="mx-8">
+    <h1 class="mb-10 text-4xl">Etapy Projektu</h1>
+    <div class="flex snap-x snap-mandatory overflow-x-auto">
+      {
+        etapyProjektu.map((tile) => (
+          <div class="mr-4 shrink-0 snap-start first:ml-auto last:mr-auto">
+            <EtapProjektu {...tile} />
+          </div>
+        ))
+      }
+    </div>
+  </section></Layout
+>
+<footer></footer>

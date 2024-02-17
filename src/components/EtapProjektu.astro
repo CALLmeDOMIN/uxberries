@@ -1,0 +1,43 @@
+---
+import { Image } from "astro:assets";
+import { type EtapProjektu } from "../utils/types";
+
+interface Props extends EtapProjektu {}
+
+const { title, image, desc } = Astro.props;
+---
+
+<div
+  class="relative flex h-[519px] w-[17.5rem] flex-col justify-between overflow-hidden rounded-[10px] bg-block pb-4 pl-5 pr-[1.125rem] pt-8"
+>
+  <div
+    class="absolute inset-0 z-30 h-full w-full bg-gradient-to-b from-block/10 from-10% via-block/30 via-50% to-block to-70%"
+  >
+  </div>
+  <h1 class="relative z-50 text-[1.625rem] font-medium leading-8">{title}</h1>
+  <Image
+    class="absolute inset-0 z-10 h-full w-full object-cover"
+    src={"/grid.svg"}
+    alt="grid"
+    width={300}
+    height={519}
+    quality={100}
+  />
+  <Image
+    class="absolute left-[80px] top-[154px] z-20 h-[205px] w-[205px]"
+    src={`/${image}.svg`}
+    alt={`${image} image`}
+    width={205}
+    height={205}
+    quality={100}
+  />
+  <p class="relative z-50 w-[20ch] text-base">
+    {
+      desc.map((line) => (
+        <>
+          {line} <br />
+        </>
+      ))
+    }
+  </p>
+</div>
