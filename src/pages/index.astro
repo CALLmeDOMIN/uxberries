@@ -4,6 +4,7 @@ import EtapProjektu from "../components/EtapProjektu.astro";
 import Project from "../components/Project.astro";
 
 import { Projects, etapyProjektu } from "../utils/data";
+import { Image } from "astro:assets";
 ---
 
 <Layout title="UXberries">
@@ -42,5 +43,36 @@ import { Projects, etapyProjektu } from "../utils/data";
     <h1 class="mb-10 text-[34px] leading-[34px]">Portfolio</h1>
     {Projects.map((project) => <Project {...project} />)}
   </section>
+  <div
+    class="relative mx-auto mb-20 h-[311px] w-[300px] overflow-hidden rounded-[10px] bg-block px-5 py-10"
+  >
+    <div
+      class="absolute inset-0 z-30 h-full w-full bg-gradient-to-t from-block"
+    >
+    </div>
+    <h1
+      class="relative z-50 mb-[60px] text-[1.625rem] font-medium italic leading-8"
+    >
+      Czy wiesz, że...
+    </h1>
+    <Image
+      class="absolute inset-0 -top-5 z-10 h-full w-full object-cover"
+      src={"/grid.svg"}
+      alt="grid"
+      width={300}
+      height={311}
+    />
+    <Image
+      class="absolute right-0 top-8 z-20 h-[115px] w-[115px]"
+      src={`/questionmark.svg`}
+      alt={`image`}
+      width={205}
+      height={205}
+    />
+    <p class="relative z-50 w-[20ch] text-lg">
+      UXberries to jedyny gatunek jagód, który z pasją zajmuje się designem i
+      potrafi projektować strony, z których da radę korzystać każdy?
+    </p>
+  </div>
 </Layout>
 <footer></footer>
