@@ -1,0 +1,44 @@
+---
+import { Image } from "astro:assets";
+import { type Projekt } from "../utils/types";
+import Tag from "./Tag.astro";
+import Author from "./Author.astro";
+
+interface Props extends Projekt {}
+
+const { image, tags, title, redirect, authors } = Astro.props;
+---
+
+<div class="flex flex-col">
+  {
+    image && (
+      <Image
+        src={`/${image}_mobile.svg`}
+        alt={image + " picture"}
+        width={300}
+        height={200}
+        class="mb-6 w-full"
+      />
+    )
+  }
+  <div class="mb-6 flex gap-[15px]">
+    {tags.map((tag) => <Tag type={tag} />)}
+  </div>
+  <a href={redirect} class="mb-6 text-[26px] font-medium leading-8"
+    >{title} &nearr;</a
+  >
+  {!authors && <div class="mb-4 w-full" />}
+  {
+    authors && (
+      <>
+        <h1 class="mb-4">Autorzy:</h1>
+        <div class="relative mb-10 flex h-16">
+          {authors.map((author, i) => (
+            <Author name={author} element={i} />
+          ))}
+        </div>
+      </>
+    )
+  }
+  <div class="mb-10 h-[2px] w-full bg-inblock"></div>
+</div>

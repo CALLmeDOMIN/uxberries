@@ -1,0 +1,23 @@
+---
+import { Image } from "astro:assets";
+
+interface Props {
+  name: string;
+  element: number;
+}
+
+const { name, element } = Astro.props;
+---
+
+<Image
+  class="absolute rounded-full"
+  style={{
+    left: `${45 * element}px`,
+    position: "absolute",
+    zIndex: `${30 - element}`,
+  }}
+  src={`/authors/${name}.svg`}
+  alt=""
+  width={60}
+  height={60}
+/>

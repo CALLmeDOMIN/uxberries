@@ -1,8 +1,9 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import EtapProjektu from "../components/EtapProjektu.astro";
+import Project from "../components/Project.astro";
 
-import { etapyProjektu } from "../utils/data";
+import { Projects, etapyProjektu } from "../utils/data";
 ---
 
 <Layout title="UXberries">
@@ -25,8 +26,8 @@ import { etapyProjektu } from "../utils/data";
   <section id="o-nas">
     <h1>O nas</h1>
   </section>
-  <section id="etapy-projektu" class="mx-8">
-    <h1 class="mb-10 text-4xl">Etapy Projektu</h1>
+  <section id="etapy-projektu" class="mx-8 mb-32">
+    <h1 class="mb-10 text-[34px] leading-[34px]">Etapy Projektu</h1>
     <div class="flex snap-x snap-mandatory overflow-x-auto">
       {
         etapyProjektu.map((tile) => (
@@ -36,6 +37,10 @@ import { etapyProjektu } from "../utils/data";
         ))
       }
     </div>
-  </section></Layout
->
+  </section>
+  <section id="portfolio" class="mx-8">
+    <h1 class="mb-10 text-[34px] leading-[34px]">Portfolio</h1>
+    {Projects.map((project) => <Project {...project} />)}
+  </section>
+</Layout>
 <footer></footer>

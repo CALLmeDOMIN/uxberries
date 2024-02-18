@@ -1,0 +1,45 @@
+---
+import { Image } from "astro:assets";
+
+interface Props {
+  type: string;
+}
+
+const { type } = Astro.props;
+
+const colorMappings: { [key: string]: string } = {
+  "MULTI-PAGE":
+    "border-[1.5px] border-[#ff8514] bg-[#391c0f] text-[#ff8514] uppercase font-semibold px-5",
+  LANDING:
+    "border-[1.5px] border-[#17A600] bg-[#0B220B] text-[#17A600] uppercase font-semibold px-5",
+  WIZYTÓWKA:
+    "border-[1.5px] border-[#B63EFF] bg-[#2A0D3E] text-[#B63EFF] uppercase font-semibold px-5",
+  "E-COMMERCE":
+    "border-[1.5px] border-[#2E80FC] bg-[#0F1B3D] text-[#2E80FC] uppercase font-semibold px-5",
+  BRANDING:
+    "border-[1.5px] border-[#C2002E] bg-[#280219] text-[#C2002E] uppercase font-semibold px-5",
+  PRAKTYKA:
+    "border-[1.5px] border-[#7A7A7A] bg-[#1E1923] text-[#7A7A7A] uppercase font-semibold px-5",
+  "JUŻ WKRÓTCE": "flex items-center gap-[10px]",
+};
+
+const getColor = (text: string) => {
+  return colorMappings[text] || "bg-transparent";
+};
+---
+
+<div
+  class={`w-fit rounded-lg py-[15px] text-[13px] leading-[13px] ${getColor(type.toUpperCase())}`}
+>
+  {
+    type.toUpperCase() == "JUŻ WKRÓTCE" && (
+      <Image
+        src={"/timelapse.svg"}
+        alt="timelapse image"
+        width={20}
+        height={20}
+      />
+    )
+  }
+  {type}
+</div>
