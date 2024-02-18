@@ -24,8 +24,8 @@ import { Image } from "astro:assets";
       </p>
     </div>
   </main>
-  <section id="o-nas">
-    <h1>O nas</h1>
+  <section id="o-nas" class="mx-8">
+    <h1 class="mb-10 text-[34px]">O nas</h1>
   </section>
   <section id="etapy-projektu" class="mx-8 mb-32">
     <h1 class="mb-10 text-[34px] leading-[34px]">Etapy Projektu</h1>
@@ -106,18 +106,23 @@ import { Image } from "astro:assets";
     >
       <div class="mb-11 flex justify-between">
         <Image
-          src="/uxberries_short.svg"
+          src="/footer/uxberries_short.svg"
           width={67}
           height={65}
           alt="UXberries logo"
         />
         <div class="grid place-items-center gap-x-5">
           <h1 class="col-span-3 text-xs text-underlight">Wspierają nas:</h1>
-          <Image alt="agh logo" src="/agh.svg" width={13} height={26} />
-          <Image alt="wh logo" src="/wh_agh.svg" width={16} height={18} />
+          <Image alt="agh logo" src="/footer/agh.svg" width={13} height={26} />
+          <Image
+            alt="wh logo"
+            src="/footer/wh_agh.svg"
+            width={16}
+            height={18}
+          />
           <Image
             alt="edisonda logo"
-            src="/edisonda.svg"
+            src="/footer/edisonda.svg"
             width={38}
             height={7}
           />
@@ -130,7 +135,11 @@ import { Image } from "astro:assets";
         Budynek C-7, <br />
         30-054, Kraków <br />
         <br />
-        <a href="" class="font-medium">Zobacz na mapie &rarr;</a>
+        <a href="" class="relative font-medium"
+          >Zobacz na mapie <span class="absolute top-[5px] leading-[8px]"
+            >&#129125;</span
+          ></a
+        >
       </p>
     </div>
   </footer></Layout

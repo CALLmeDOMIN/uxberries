@@ -13,7 +13,7 @@ const { image, tags, title, redirect, authors } = Astro.props;
   {
     image && (
       <Image
-        src={`/${image}_mobile.svg`}
+        src={`/projects/${image}_mobile.svg`}
         alt={image}
         width={300}
         height={200}
@@ -24,13 +24,22 @@ const { image, tags, title, redirect, authors } = Astro.props;
   <div class="mb-6 flex gap-x-4">
     {tags.map((tag) => <Tag type={tag} />)}
   </div>
-  <a href={redirect} class="mb-6 text-[26px] font-medium leading-8"
-    >{title} &nearr;</a
-  >
-  {!authors && <div class="mb-4 w-full" />}
+  {
+    !authors && (
+      <>
+        <a href={redirect} class="mb-6 text-[26px] font-medium leading-8">
+          {title}
+        </a>
+        <div class="mb-4 w-full" />
+      </>
+    )
+  }
   {
     authors && (
       <>
+        <a href={redirect} class="mb-6 text-[26px] font-medium leading-8">
+          {title} &#129125;
+        </a>
         <h1 class="mb-4">Autorzy:</h1>
         <div class="relative mb-10 flex h-16">
           {authors.map((author, i) => (
