@@ -14,14 +14,14 @@ const { image, tags, title, redirect, authors } = Astro.props;
     image && (
       <Image
         src={`/${image}_mobile.svg`}
-        alt={image + " picture"}
+        alt={image}
         width={300}
         height={200}
         class="mb-6 w-full"
       />
     )
   }
-  <div class="mb-6 flex gap-[15px]">
+  <div class="mb-6 flex gap-x-4">
     {tags.map((tag) => <Tag type={tag} />)}
   </div>
   <a href={redirect} class="mb-6 text-[26px] font-medium leading-8"
