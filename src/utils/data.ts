@@ -29,21 +29,21 @@ export const Projects: Projekt[] = [
     title: "Redesign strony zespołu wyścigowego AGH Racing",
     tags: ["multi-page", 'wizytówka'],
     image: "racing",
-    authors: ["bartek", "hela", "marzenka", "krystian", "oliwia", "heniek"],
+    authors: ["1", "2", "3", "4", "5", "6"],
     redirect: "https://google.com"
   },
   {
     title: "Redesign strony Browaru Stu Mostów",
     tags: ["praktyka", 'e-commerce'],
-    image: "browar",
-    authors: ["marzenka", "maja", "julka"],
+    image: "piwo",
+    authors: ["3", "8", "11"],
     redirect: "https://google.com"
   },
   {
     title: "Strona lekarza rodzinnego",
     tags: ["praktyka", 'wizytówka'],
-    image: "lekarz",
-    authors: ["angelika", "bartek", "karol", "marysia"],
+    image: "doktor",
+    authors: ["10", "1", "9", "12"],
     redirect: "https://google.com"
   },
   {
