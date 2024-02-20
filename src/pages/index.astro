@@ -9,9 +9,11 @@ import { Image } from "astro:assets";
 
 <Layout title="UXberries">
   <main class="flex h-screen items-center justify-center">
-    <div class="flex flex-col gap-10 text-center font-medium">
+    <div class="flex flex-col gap-10 text-center font-medium md:gap-6">
       <h1 class="text-sm uppercase leading-[0.875rem]">koło naukowe agh</h1>
-      <h1 class="text-[2.125rem] leading-[3.125rem]">
+      <h1
+        class="text-[2.125rem] leading-[3.125rem] md:text-[64px] md:leading-[72px]"
+      >
         Projektujemy <br />
         <span class="text-underlight"> produkty cyfrowe</span>
       </h1>
@@ -24,11 +26,25 @@ import { Image } from "astro:assets";
       </p>
     </div>
   </main>
-  <section id="o-nas" class="mx-8">
-    <h1 class="mb-10 text-[34px]">O nas</h1>
-
-    <div class="mb-8 rounded-[10px] bg-block px-5 py-8">
-      <p>
+  <section
+    id="o-nas"
+    class="mx-8 md:mx-36 md:mb-44 md:grid md:grid-cols-2 md:gap-6 md:text-[18px] md:leading-7"
+  >
+    <h1 class="mb-10 text-[34px] md:mb-0 md:text-[64px]">O nas</h1>
+    <div
+      class="mb-8 hidden rounded-[20px] bg-block md:row-span-2 md:mb-0 md:block"
+    >
+      <p class="max-w-[80%] px-10 pb-10">
+        <span class="text-underlight">
+          Nasi członkowie studiują na kierunkach związanych
+        </span>
+        z designem, grafiką, marketingiem i badaniami — czyli wszystkim, co jest
+        potrzebne do stworzenia produktu cyfrowego, który pomoże w osiągnięciu Twoich
+        celów.
+      </p>
+    </div>
+    <div class="mb-8 rounded-[10px] bg-block md:mb-0 md:rounded-[20px]">
+      <p class="max-w-[90%] px-5 pt-8 md:px-10 md:pt-10">
         Dbamy o jakość wykonywanych projektów,
         <span class="text-underlight">
           dlatego organizujemy szkolenia i warsztaty dla naszych członków,
@@ -36,22 +52,35 @@ import { Image } from "astro:assets";
         prowadzone przez osoby ze znanych Polskich agencji.
       </p>
     </div>
+    <div
+      class="mb-8 rounded-[10px] bg-block md:col-span-2 md:mb-0 md:rounded-[20px]"
+    >
+      <Image
+        class="min-h-72 rounded-[10px] object-cover"
+        src="/o-nas/1.webp"
+        alt="projekty"
+        width={2000}
+        height={1333}
+      />
+      <div class="md: px-5 py-8 md:flex md:justify-between md:px-10 md:py-10">
+        <p class="max-w-[62.5%]">
+          <span class="text-underlight">
+            Na początku każdego roku akademickiego
+          </span>
+          szkolimy nowych członków z metod oraz praktyk UX i UI, jak i grafiki,
+          <span class="text-underlight">
+            poprzez różnorodne projekty wdrożeniowe oraz warsztaty.
+          </span>
+          Dzięki temu posiadamy wykwalifikowane osoby, gotowe do zrealizowania Twojego
+          projektu oraz podjęcia pracy w zawodzie projektanta.
+        </p>
 
-    <div class="mb-8 rounded-[10px] bg-block px-5 py-8">
-      <p>
-        <span class="text-underlight">
-          Na początku każdego roku akademickiego
-        </span>
-        szkolimy nowych członków z metod oraz praktyk UX i UI, jak i grafiki,
-        <span class="text-underlight">
-          poprzez różnorodne projekty wdrożeniowe oraz warsztaty.
-        </span>
-        Dzięki temu posiadamy wykwalifikowane osoby, gotowe do zrealizowania Twojego
-        projektu oraz podjęcia pracy w zawodzie projektanta.
-      </p>
+        <div class="md:text- mt-8 flex justify-end md:items-end">
+          <a href="">Zobacz projekty &#x1F865;</a>
+        </div>
+      </div>
     </div>
-
-    <div class="mb-8 rounded-[10px] bg-block px-5 py-8">
+    <div class="mb-8 rounded-[10px] bg-block px-5 py-8 md:hidden">
       <p>
         <span class="text-underlight">
           Nasi członkowie studiują na kierunkach związanych
@@ -61,21 +90,47 @@ import { Image } from "astro:assets";
         celów.
       </p>
     </div>
-
-    <div class="mb-8 rounded-[10px] bg-block px-5 py-8">
-      <p>
-        <span class="text-underlight">
-          Przyczyniamy się również do poszerzania wiedzy osób spoza naszego
-          zespołu,
-        </span>
-        dlatego do roku organizujemy konferencje i spotkania projektantów, na których
-        każdy ma możliwość zapoznać się z zawodem designera oraz porozmawiać z zawodowcami
-        z wieloletnim doświadczeniem w branży.
-      </p>
+    <div
+      class="mb-8 rounded-[10px] bg-block md:col-span-2 md:mb-0 md:rounded-[20px]"
+    >
+      <div class="md:flex md:max-w-lg">
+        <Image
+          class="min-h-[300px] rounded-[10px] object-cover"
+          src="/o-nas/2.webp"
+          alt="projekty"
+          width={2000}
+          height={1333}
+        />
+        <div>
+          <Image
+            class="hidden md:block"
+            src={"/ciemna-strona.webp"}
+            alt="ciemna strona"
+            width={630}
+            height={240}
+          />
+          <div class="px-5 py-8 md:px-10">
+            <p class="md:max-w-lg">
+              <span class="text-underlight">
+                Przyczyniamy się również do poszerzania wiedzy osób spoza
+                naszego zespołu,
+              </span>
+              dlatego do roku organizujemy konferencje i spotkania projektantów,
+              na których każdy ma możliwość zapoznać się z zawodem designera oraz
+              porozmawiać z zawodowcami z wieloletnim doświadczeniem w branży.
+            </p>
+            <div class="mt-8 flex justify-end">
+              <a href="">Więcej &#x1F865;</a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
-  <section id="etapy-projektu" class="mx-8 mb-32">
-    <h1 class="mb-10 text-[34px] leading-[34px]">Etapy Projektu</h1>
+  <section id="etapy-projektu" class="mx-8 mb-32 md:mx-36 md:mb-44">
+    <h1 class="mb-10 text-[34px] leading-[34px] md:text-[64px]">
+      Etapy Projektu
+    </h1>
     <div class="flex snap-x snap-mandatory overflow-x-auto">
       {
         etapyProjektu.map((tile) => (
@@ -86,8 +141,8 @@ import { Image } from "astro:assets";
       }
     </div>
   </section>
-  <section id="portfolio" class="mx-8">
-    <h1 class="mb-10 text-[34px] leading-[34px]">Portfolio</h1>
+  <section id="portfolio" class="mx-8 md:mx-36">
+    <h1 class="mb-10 text-[34px] leading-[34px] md:text-[64px]">Portfolio</h1>
     {Projects.map((project) => <Project {...project} />)}
   </section>
   <div
@@ -153,7 +208,7 @@ import { Image } from "astro:assets";
     >
       <div class="mb-11 flex justify-between">
         <Image
-          src="/footer/uxberries_short.svg"
+          src="/footer/uxberries_short_white.svg"
           width={67}
           height={65}
           alt="UXberries logo"
@@ -184,7 +239,7 @@ import { Image } from "astro:assets";
         <br />
         <a href="" class="relative font-medium"
           >Zobacz na mapie <span class="absolute top-[5px] leading-[8px]"
-            >&#129125;</span
+            >&#x1F865;</span
           ></a
         >
       </p>

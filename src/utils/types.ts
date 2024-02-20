@@ -10,4 +10,5 @@ export type Projekt = {
   image?: string;
   redirect?: string;
   authors?: string[];
+  isArriveSoon: boolean;
 };

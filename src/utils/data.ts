@@ -30,28 +30,33 @@ export const Projects: Projekt[] = [
     tags: ["multi-page", 'wizytówka'],
     image: "racing",
     authors: ["1", "2", "3", "4", "5", "6"],
-    redirect: "https://google.com"
+    redirect: "https://google.com",
+    isArriveSoon: false
   },
   {
     title: "Redesign strony Browaru Stu Mostów",
     tags: ["praktyka", 'e-commerce'],
     image: "piwo",
     authors: ["3", "8", "11"],
-    redirect: "https://google.com"
+    redirect: "https://google.com",
+    isArriveSoon: false
   },
   {
     title: "Strona lekarza rodzinnego",
     tags: ["praktyka", 'wizytówka'],
     image: "doktor",
     authors: ["10", "1", "9", "12"],
-    redirect: "https://google.com"
+    redirect: "https://google.com",
+    isArriveSoon: false
   },
   {
     title: "Strona zespołu gamedev Mage's Tea",
-    tags: ["Już wkrótce"]
+    tags: [],
+    isArriveSoon: true
   },
   {
     title: "Strona koła naukowego SpaceTeam AGH",
-    tags: ["Już wkrótce"]
+    tags: [],
+    isArriveSoon: true
   }
 ]
