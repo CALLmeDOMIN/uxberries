@@ -4,11 +4,43 @@ import { Image } from "astro:assets";
 
 <nav class="absolute flex h-24 w-full items-center justify-center">
   <Image
-    src="/logo.png"
+    class="md:hidden"
+    src="/uxberries_long_white.svg"
     alt="logo"
     width="112"
     height="17"
     quality="100"
     loading="eager"
   />
+  <ul
+    class="mx-36 hidden w-full items-center gap-12 text-[18px] font-medium md:flex"
+  >
+    <li>
+      <Image
+        src="/uxberries_long_white.svg"
+        alt="logo"
+        width="147"
+        height="22"
+        quality="100"
+        loading="eager"
+        class="object-cover"
+      />
+    </li>
+    <li class="hover:cursor-pointer hover:text-hover">
+      <a href="">O nas</a>
+    </li>
+    <li class="grow">
+      <a href="" class="hover:cursor-pointer hover:text-hover">Portfolio</a>
+    </li>
+    <li class="hover:cursor-pointer hover:text-hover">
+      <a href="">Kariera</a>
+    </li>
+    <li class="hover:cursor-pointer hover:text-hover">
+      <a
+        href=""
+        class="rounded-[10px] border-[1.5px] bg-white/20 px-[18px] py-[10px] hover:border-hover hover:bg-hover/20"
+        >uxberries@gmail.com <span class="ml-[10px]">&#x1F865;</span>
+      </a>
+    </li>
+  </ul>
 </nav>
