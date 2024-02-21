@@ -7,3 +7,7 @@
 body {
   @apply bg-background font-plus-jakarta-sans text-white;
 }
+
+.no-scroll {
+  overflow: hidden;
+}

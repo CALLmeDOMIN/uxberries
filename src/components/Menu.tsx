@@ -7,19 +7,24 @@ interface MenuProps {
 const Menu = ({ className }: MenuProps) => {
   const [isOpen, setIsOpen] = useState(false);
 
+  const toggleMenu = () => {
+    const newState = !isOpen;
+    setIsOpen(newState);
+
+    if (newState) {
+      document.body.classList.add("no-scroll");
+    } else {
+      document.body.classList.remove("no-scroll");
+    }
+  };
+
   return (
-    <>
+    <span className="md:hidden">
       <button
-        onClick={() => setIsOpen(!isOpen)}
+        onClick={toggleMenu}
         className="absolute right-8 top-10 z-10 h-6 w-6"
       >
         {isOpen ? (
-          <svg viewBox="0 0 80 80" width="24" height="24" fill="#fff">
-            <rect width="80" height="10"></rect>
-            <rect y="30" width="80" height="10"></rect>
-            <rect y="60" width="80" height="10"></rect>
-          </svg>
-        ) : (
           <svg viewBox="0 0 80 80" width="24" height="24" fill="#533C96">
             <rect
               width="100"
@@ -36,11 +41,17 @@ const Menu = ({ className }: MenuProps) => {
               transform="rotate(-45)"
             ></rect>
           </svg>
+        ) : (
+          <svg viewBox="0 0 80 80" width="24" height="24" fill="#fff">
+            <rect width="80" height="10"></rect>
+            <rect y="30" width="80" height="10"></rect>
+            <rect y="60" width="80" height="10"></rect>
+          </svg>
         )}
       </button>
       <div
         className={`absolute inset-0 h-screen w-screen flex-col items-center justify-between bg-white pb-20 pt-12 
-          ${isOpen ? "hidden" : "flex"}`}
+          ${isOpen ? "flex" : "hidden"}`}
       >
         <img
           src="/uxberries_long_purple.svg"
@@ -82,7 +93,7 @@ const Menu = ({ className }: MenuProps) => {
           </div>
         </div>
       </div>
-    </>
+    </span>
   );
 };
 
