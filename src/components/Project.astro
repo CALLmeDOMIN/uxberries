@@ -20,7 +20,7 @@ const { image, tags, title, redirect, authors, isArriveSoon } = Astro.props;
             width={4504}
             height={2092}
             sizes="(max-width: 768px) 90vw, 700px"
-            class="mb-6 h-[200px] w-full rounded-[10px] object-cover md:mb-12 md:h-[325px] md:w-[700px] md:rounded-[20px]"
+            class="mb-6 h-[200px] w-full rounded-[10px] object-cover md:mb-12 md:h-[325px] md:min-w-[50%] md:rounded-[20px]"
           />
         </>
       )
@@ -52,7 +52,7 @@ const { image, tags, title, redirect, authors, isArriveSoon } = Astro.props;
         authors && (
           <>
             <a href={redirect} class="mb-6 text-[26px] font-medium leading-8">
-              {title} &#x1F865;
+              {title} <img src="/arrow-right-up.svg" alt="arrow" width="24" height="24" class="inline-block -mt-1 w-6 h-6 align-middle">
             </a>
             <h1 class="mb-4">Autorzy:</h1>
             <div class="relative mb-10 flex h-16">

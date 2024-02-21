@@ -63,7 +63,7 @@ import { Image } from "astro:assets";
         height={1333}
       />
       <div class="md: px-5 py-8 md:flex md:justify-between md:px-10 md:py-10">
-        <p class="max-w-[62.5%]">
+        <p class="md:max-w-[62.5%]">
           <span class="text-underlight">
             Na początku każdego roku akademickiego
           </span>
@@ -76,7 +76,15 @@ import { Image } from "astro:assets";
         </p>
 
         <div class="md:text- mt-8 flex justify-end md:items-end">
-          <a href="">Zobacz projekty &#x1F865;</a>
+          <a href=""
+            >Zobacz projekty <img
+              src="/arrow-right-up.svg"
+              alt="arrow"
+              width="16"
+              height="16"
+              class="-mt-1 inline-block h-4 w-4 align-middle"
+            /></a
+          >
         </div>
       </div>
     </div>
@@ -93,15 +101,15 @@ import { Image } from "astro:assets";
     <div
       class="mb-8 rounded-[10px] bg-block md:col-span-2 md:mb-0 md:rounded-[20px]"
     >
-      <div class="md:flex md:max-w-lg">
+      <div class="md:flex">
         <Image
-          class="min-h-[300px] rounded-[10px] object-cover"
+          class="min-h-[300px] rounded-[10px] object-cover md:max-w-lg"
           src="/o-nas/2.webp"
           alt="projekty"
           width={2000}
           height={1333}
         />
-        <div>
+        <div class="md:w-full">
           <Image
             class="hidden md:block"
             src={"/ciemna-strona.webp"}
@@ -110,7 +118,7 @@ import { Image } from "astro:assets";
             height={240}
           />
           <div class="px-5 py-8 md:px-10">
-            <p class="md:max-w-lg">
+            <p class="md:max-w-[90%]">
               <span class="text-underlight">
                 Przyczyniamy się również do poszerzania wiedzy osób spoza
                 naszego zespołu,
@@ -120,7 +128,15 @@ import { Image } from "astro:assets";
               porozmawiać z zawodowcami z wieloletnim doświadczeniem w branży.
             </p>
             <div class="mt-8 flex justify-end">
-              <a href="">Więcej &#x1F865;</a>
+              <a href=""
+                >Więcej <img
+                  src="/arrow-right-up.svg"
+                  alt="arrow"
+                  width="16"
+                  height="16"
+                  class="-mt-1 inline-block h-4 w-4 align-middle"
+                /></a
+              >
             </div>
           </div>
         </div>
@@ -146,14 +162,14 @@ import { Image } from "astro:assets";
     {Projects.map((project) => <Project {...project} />)}
   </section>
   <div
-    class="relative mx-auto mb-32 h-[311px] w-[300px] overflow-hidden rounded-[10px] bg-block px-5 py-10"
+    class="relative mx-auto mb-32 h-[311px] w-[300px] overflow-hidden rounded-[10px] bg-block px-5 py-10 md:mx-36 md:w-auto md:px-24 md:py-[77px]"
   >
     <div
       class="absolute inset-0 z-30 h-full w-full bg-gradient-to-t from-block"
     >
     </div>
     <h1
-      class="relative z-50 mb-[60px] text-[1.625rem] font-medium italic leading-8"
+      class="relative z-50 mb-[60px] text-[1.625rem] font-medium italic leading-8 md:mb-11 md:text-[40px] md:leading-[64px]"
     >
       Czy wiesz, że...
     </h1>
@@ -171,7 +187,9 @@ import { Image } from "astro:assets";
       width={205}
       height={205}
     />
-    <p class="relative z-50 w-[20ch] text-lg">
+    <p
+      class="relative z-50 w-[20ch] text-lg md:w-auto md:text-[26px] md:leading-[42px]"
+    >
       UXberries to jedyny gatunek jagód, który z pasją zajmuje się designem i
       potrafi projektować strony, z których da radę korzystać każdy?
     </p>
@@ -194,14 +212,15 @@ import { Image } from "astro:assets";
         <div class="mb-10 h-1 w-full bg-secondary-purple"></div>
       </div>
 
-      <button class="mx-auto rounded-[10px] bg-secondary-purple p-5 text-white"
-        ><Image
-          src={"/right_arr.svg"}
-          alt="right arrow"
-          width={11}
-          height={11}
-        /></button
-      >
+      <button class="mx-auto rounded-[10px] bg-secondary-purple p-5 text-white">
+        <img
+          width="16"
+          height="16"
+          src="/arrow-right-up.svg"
+          class="h-4 w-4 rotate-45 align-middle"
+          alt="arrow"
+        />
+      </button>
     </div>
     <div
       class="h-[333px] w-full bg-[url('/footer/footer_background.svg')] bg-cover bg-no-repeat p-11"
@@ -237,11 +256,18 @@ import { Image } from "astro:assets";
         Budynek C-7, <br />
         30-054, Kraków <br />
         <br />
-        <a href="" class="relative font-medium"
-          >Zobacz na mapie <span class="absolute top-[5px] leading-[8px]"
-            >&#x1F865;</span
-          ></a
-        >
+        <a href="" class="relative font-medium">
+          Zobacz na mapie
+          <span class="absolute top-[5px] leading-[8px]">
+            <img
+              src="/arrow-right-up.svg"
+              alt="arrow"
+              width="16"
+              height="16"
+              class="-mt-1 inline-block h-4 w-4 align-middle"
+            /></span
+          >
+        </a>
       </p>
     </div>
   </footer></Layout
