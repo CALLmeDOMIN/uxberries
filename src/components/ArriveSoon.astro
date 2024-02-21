@@ -1,0 +1,26 @@
+---
+import { Image } from "astro:assets";
+import { type Projekt } from "../utils/types";
+import Tag from "./Tag.astro";
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<div class="flex flex-col">
+  <div class="max-w-[95%] md:flex md:justify-between">
+    <span class="md:hidden">
+      <Tag type="JUŻ WKRÓTCE" />
+    </span>
+    <p class="mb-10 mt-6 text-[26px] font-medium leading-8 md:-mt-1 md:mb-11">
+      {title}
+    </p>
+    <span class="mt-[2px] hidden align-middle md:block">
+      <Tag type="JUŻ WKRÓTCE" />
+    </span>
+  </div>
+  <div class="mb-10 h-[2px] w-full bg-inblock md:mb-12"></div>
+</div>

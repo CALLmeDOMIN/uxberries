@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import EtapProjektu from "../components/EtapProjektu.astro";
 import Project from "../components/Project.astro";
+import ArriveSoon from "../components/ArriveSoon.astro";
 
 import { Projects, etapyProjektu } from "../utils/data";
 import { Image } from "astro:assets";
@@ -157,12 +158,20 @@ import { Image } from "astro:assets";
       }
     </div>
   </section>
-  <section id="portfolio" class="mx-8 md:mx-36">
+  <section id="portfolio" class="mx-8 md:mx-36 md:mb-32">
     <h1 class="mb-10 text-[34px] leading-[34px] md:text-[64px]">Portfolio</h1>
-    {Projects.map((project) => <Project {...project} />)}
+    {
+      Projects.map((project) => {
+        return project.isArriveSoon === false ? (
+          <Project {...project} />
+        ) : (
+          <ArriveSoon title={project.title} />
+        );
+      })
+    }
   </section>
   <div
-    class="relative mx-auto mb-32 h-[311px] w-[300px] overflow-hidden rounded-[10px] bg-block px-5 py-10 md:mx-36 md:w-auto md:px-24 md:py-[77px]"
+    class="relative mx-auto mb-32 h-[311px] w-[300px] overflow-hidden rounded-[10px] bg-block px-5 py-10 md:mx-36 md:mb-44 md:w-auto md:px-24 md:py-[77px]"
   >
     <div
       class="absolute inset-0 z-30 h-full w-full bg-gradient-to-t from-block"
