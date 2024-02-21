@@ -1,5 +1,6 @@
 ---
 import { Image } from "astro:assets";
+import Menu from "./Menu";
 ---
 
 <nav class="absolute flex h-24 w-full items-center justify-center">
@@ -12,6 +13,7 @@ import { Image } from "astro:assets";
     quality="100"
     loading="eager"
   />
+  <Menu client:load />
   <ul
     class="mx-36 hidden w-full items-center gap-12 text-[18px] font-medium md:flex"
   >
