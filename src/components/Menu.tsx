@@ -15,7 +15,7 @@ const Menu = () => {
   };
 
   return (
-    <span className="md:hidden">
+    <span className="lg:hidden">
       <button
         onClick={toggleMenu}
         className="absolute right-8 top-10 z-10 h-6 w-6"
@@ -83,9 +83,30 @@ const Menu = () => {
             </a>
           </div>
           <div className="flex justify-center gap-[50px]">
-            <div className="h-10 w-10 bg-main-purple"></div>
-            <div className="h-10 w-10 bg-main-purple"></div>
-            <div className="h-10 w-10 bg-main-purple"></div>
+            <a href="">
+              <img
+                src="/facebook_purple.svg"
+                alt="facebook"
+                width="36"
+                height="36"
+              />
+            </a>
+            <a href="">
+              <img
+                src="/behance_purple.svg"
+                alt="behance"
+                width="36"
+                height="36"
+              />
+            </a>
+            <a href="" className="py-[1px]">
+              <img
+                src="/linkedin_purple.svg"
+                alt="linkedin"
+                width="34"
+                height="34"
+              />
+            </a>
           </div>
         </div>
       </div>
