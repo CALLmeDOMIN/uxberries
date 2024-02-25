@@ -9,8 +9,18 @@ import { Image } from "astro:assets";
 ---
 
 <Layout title="UXberries">
-  <main class="flex h-screen items-center justify-center">
-    <div class="flex flex-col gap-10 text-center font-medium md:gap-6">
+  <main class="flex h-screen items-center justify-center overflow-x-hidden">
+    <div
+      class="absolute inset-0 -left-8 z-0 w-[calc(100vw_+_40px)] bg-[url('/grid.png')] bg-cover opacity-20"
+    >
+    </div>
+    <div
+      class="absolute inset-0 z-[5] w-full bg-gradient-to-b from-main-purple via-main-purple/30"
+    >
+    </div>
+    <div
+      class="relative z-10 flex flex-col gap-10 text-center font-medium md:gap-6"
+    >
       <h1 class="text-sm uppercase leading-[0.875rem]">koło naukowe agh</h1>
       <h1
         class="text-[2.125rem] leading-[3.125rem] md:text-[64px] md:leading-[72px]"
@@ -20,13 +30,19 @@ import { Image } from "astro:assets";
       </h1>
       <p class="text-xl leading-[1.875rem]">
         <span class="text-underlight">
-          Dla startupu, koła naukowego, <br />
-          firmy, usługi, bloga, portfolio. <br />
+          Dla startupu, koła naukowego, <br class="md:hidden" />
+          firmy, usługi, <br class="hidden md:block" />
+          bloga, portfolio. <br class="md:hidden" />
         </span>
         Szybko i niezawodnie!
       </p>
     </div>
   </main>
+
+  <div class="relative z-10 -mt-[33px] mb-10 h-12 bg-background">
+    pasek placeholder
+  </div>
+
   <section
     id="o-nas"
     class="mx-8 md:mx-36 md:mb-44 md:grid md:grid-cols-2 md:gap-6 md:text-[18px] md:leading-7"
@@ -78,7 +94,7 @@ import { Image } from "astro:assets";
 
         <div class="md:text- mt-8 flex justify-end md:items-end">
           <a href=""
-            >Zobacz projekty <img
+            >Zobacz projekty <Image
               src="/arrow-right-up.svg"
               alt="arrow"
               width="16"
@@ -171,14 +187,14 @@ import { Image } from "astro:assets";
     }
   </section>
   <div
-    class="relative mx-auto mb-32 w-[300px] overflow-hidden rounded-[10px] bg-block px-5 py-10 md:mx-36 md:mb-44 md:w-auto md:px-24 md:py-[77px]"
+    class="relative mx-auto mb-32 w-[300px] overflow-hidden rounded-[10px] bg-block px-5 py-10 md:mx-36 md:mb-44 md:w-auto md:rounded-[20px] md:px-24 md:py-[77px]"
   >
     <div
-      class="absolute inset-0 -top-5 left-[1px] h-full w-full bg-[url('/grid_white.png')]"
+      class="absolute inset-0 -top-5 left-[1px] h-full w-full bg-[url('/grid.png')]"
     >
     </div>
     <div
-      class="absolute inset-0 z-20 h-full w-full bg-gradient-to-t from-block to-block/70"
+      class="absolute inset-0 z-20 h-full w-full bg-gradient-to-t from-block from-20% to-block/70"
     >
     </div>
     <h1
@@ -187,11 +203,11 @@ import { Image } from "astro:assets";
       Czy wiesz, że...
     </h1>
     <Image
-      class="absolute right-0 top-8 z-30 aspect-square h-[115px] md:-right-6 md:top-2 md:h-[180px]"
+      class="absolute right-0 top-8 z-30 aspect-square h-[115px] md:-right-3 md:top-3 md:h-[180px]"
       src={`/questionmark.svg`}
       alt="questionmark"
-      width={205}
-      height={205}
+      width={180}
+      height={180}
     />
     <p
       class="relative z-50 w-[20ch] text-lg md:w-auto md:text-[26px] md:leading-8"
@@ -202,7 +218,7 @@ import { Image } from "astro:assets";
   </div>
   <footer>
     <div
-      class="relative flex flex-col overflow-x-hidden bg-white p-10 text-black md:grid md:grid-cols-5 md:p-28 md:px-36"
+      class="relative flex flex-col overflow-x-hidden bg-white p-10 text-black md:grid md:grid-cols-5 md:px-2 md:py-28 lg:px-36"
     >
       <span
         class="relative z-10 text-center text-[18px] uppercase md:flex md:flex-col md:justify-center md:text-left"
@@ -225,7 +241,9 @@ import { Image } from "astro:assets";
         <div class="mb-10 h-1 w-full bg-secondary-purple md:m-0"></div>
       </div>
 
-      <span class="relative z-10 md:flex md:items-center md:justify-end">
+      <span
+        class="relative z-10 mx-auto md:flex md:items-center md:justify-end"
+      >
         <button
           class="mx-auto rounded-[10px] bg-secondary-purple p-5 text-white md:m-0 md:p-6"
         >
