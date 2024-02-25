@@ -1,10 +1,6 @@
 import { useState } from "react";
 
-interface MenuProps {
-  className?: string;
-}
-
-const Menu = ({ className }: MenuProps) => {
+const Menu = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
