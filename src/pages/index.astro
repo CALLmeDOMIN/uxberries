@@ -6,12 +6,13 @@ import ArriveSoon from "../components/ArriveSoon.astro";
 
 import { Projects, etapyProjektu } from "../utils/data";
 import { Image } from "astro:assets";
+import Tag from "../components/Tag.astro";
 ---
 
 <Layout title="UXberries">
   <main class="flex h-screen items-center justify-center overflow-x-hidden">
     <div
-      class="absolute inset-0 -left-8 z-0 w-[calc(100vw_+_40px)] bg-[url('/grid.png')] bg-cover opacity-20"
+      class="absolute inset-0 z-0 w-screen bg-[url('/grid.png')] bg-cover opacity-20"
     >
     </div>
     <div
@@ -39,19 +40,60 @@ import { Image } from "astro:assets";
     </div>
   </main>
 
-  <div class="relative z-10 -mt-[33px] mb-10 h-12 bg-background">
-    pasek placeholder
+  <div
+    class="mb-32 mt-8 flex justify-between overflow-auto md:mx-auto md:mb-44 md:mt-9 md:max-w-6xl"
+  >
+    <div class="my-4 flex gap-4 px-8">
+      <Tag type="multi-page" />
+      <Tag type="landing" />
+      <Tag type="wizytówka" />
+      <Tag type="e-commerce" />
+      <Tag type="branding" />
+    </div>
+    <div class="hidden items-center gap-6 md:flex">
+      <div
+        class="flex aspect-square w-[75px] justify-center rounded-full bg-inblock"
+      >
+        <Image src="/figma.svg" alt="figma" width={20} height={30} />
+      </div>
+      <div
+        class="flex aspect-square w-[75px] justify-center rounded-full bg-inblock"
+      >
+        <Image
+          src="/adobe_cc.svg"
+          alt="adobe creative cloud"
+          width={39}
+          height={29}
+        />
+      </div>
+      <div
+        class="flex aspect-square w-[75px] justify-center rounded-full bg-inblock"
+      >
+        <Image src="/miro.svg" alt="miro" width={28} height={27} />
+      </div>
+    </div>
   </div>
 
   <section
     id="o-nas"
-    class="mx-8 md:mx-36 md:mb-44 md:grid md:grid-cols-2 md:gap-6 md:text-[18px] md:leading-7"
+    class="mx-8 max-w-6xl md:mx-auto md:mb-44 md:grid md:grid-cols-2 md:gap-6 md:text-[18px] md:leading-7"
   >
-    <h1 class="mb-10 text-[34px] md:mb-0 md:text-[64px]">O nas</h1>
+    <h1 class="mb-10 text-[34px] md:mb-[70px] md:text-[64px]">O nas</h1>
     <div
-      class="mb-8 hidden rounded-[20px] bg-block md:row-span-2 md:mb-0 md:block"
+      class="mb-8 hidden overflow-hidden rounded-[20px] bg-block md:row-span-2 md:mb-0 md:block"
     >
-      <p class="max-w-[80%] px-10 pb-10">
+      <div class="relative h-[370px] w-full">
+        <div
+          class="absolute inset-0 left-[1px] h-full w-full bg-[url('/grid.png')]"
+        >
+        </div>
+        <div
+          class="absolute inset-0 z-20 h-full w-full bg-gradient-to-t from-block from-20% to-block/70"
+        >
+        </div>
+      </div>
+
+      <p class="px-10 pb-10 text-[18px] leading-[26px]">
         <span class="text-underlight">
           Nasi członkowie studiują na kierunkach związanych
         </span>
@@ -60,20 +102,35 @@ import { Image } from "astro:assets";
         celów.
       </p>
     </div>
-    <div class="mb-8 rounded-[10px] bg-block md:mb-0 md:rounded-[20px]">
-      <p class="max-w-[90%] px-5 pt-8 md:px-10 md:pt-10">
+    <div
+      class="mb-8 overflow-hidden rounded-[10px] bg-block md:mb-0 md:rounded-[20px]"
+    >
+      <p
+        class="max-w-[90%] px-5 pt-8 text-[18px] leading-[26px] md:px-10 md:pt-10"
+      >
         Dbamy o jakość wykonywanych projektów,
         <span class="text-underlight">
           dlatego organizujemy szkolenia i warsztaty dla naszych członków,
         </span>
         prowadzone przez osoby ze znanych Polskich agencji.
       </p>
+
+      <div class="relative h-60 w-full">
+        <div
+          class="absolute inset-0 left-[1px] h-full w-full bg-[url('/grid.png')]"
+        >
+        </div>
+        <div
+          class="absolute inset-0 z-20 h-full w-full bg-gradient-to-b from-block from-20% to-block/70"
+        >
+        </div>
+      </div>
     </div>
     <div
       class="mb-8 rounded-[10px] bg-block md:col-span-2 md:mb-0 md:rounded-[20px]"
     >
       <Image
-        class="min-h-72 rounded-[10px] object-cover"
+        class="max-h-[278px] rounded-[10px] object-cover"
         src="/o-nas/1.webp"
         alt="projekty"
         width={2000}
@@ -116,26 +173,43 @@ import { Image } from "astro:assets";
       </p>
     </div>
     <div
-      class="mb-8 rounded-[10px] bg-block md:col-span-2 md:mb-0 md:rounded-[20px]"
+      class="mb-8 max-h-[450px] overflow-hidden rounded-[10px] bg-block md:col-span-2 md:mb-0 md:rounded-[20px]"
     >
       <div class="md:flex">
         <Image
-          class="min-h-[300px] rounded-[10px] object-cover md:max-w-lg"
+          class="max-h-[300px] rounded-[10px] object-cover md:max-h-[450px] md:max-w-lg"
           src="/o-nas/2.webp"
           alt="projekty"
           width={2000}
           height={1333}
         />
         <div class="md:w-full">
-          <Image
-            class="hidden md:block"
-            src={"/ciemna-strona.webp"}
-            alt="ciemna strona"
-            width={630}
-            height={240}
-          />
-          <div class="px-5 py-8 md:px-10">
-            <p class="md:max-w-[90%]">
+          <div class="relative hidden h-60 w-full lg:block">
+            <div
+              class="absolute inset-0 left-[1px] h-full w-full bg-[url('/grid.png')]"
+            >
+            </div>
+            <div
+              class="absolute inset-0 z-20 h-full w-full bg-gradient-to-t from-block from-0% to-block/70"
+            >
+            </div>
+            <div
+              class="absolute z-30 flex h-full w-full items-center justify-center"
+            >
+              <div
+                class="rounded-[10px] border border-white/30 bg-inblock px-7 py-4 lg:px-32 lg:py-7"
+              >
+                <Image
+                  src={"/csux_long.svg"}
+                  alt="csux"
+                  width={263}
+                  height={19}
+                />
+              </div>
+            </div>
+          </div>
+          <div class="px-5 pb-8 pt-8 md:px-10 lg:pt-0">
+            <p class="md:max-w-[92%]">
               <span class="text-underlight">
                 Przyczyniamy się również do poszerzania wiedzy osób spoza
                 naszego zespołu,
