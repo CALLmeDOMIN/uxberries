@@ -45,54 +45,83 @@ import Tag from "../components/Tag.astro";
   >
     <div
       class="flex justify-between overflow-auto py-4 md:mx-auto md:max-w-6xl md:py-12"
-  >
-    <div class="my-4 flex gap-4 px-8">
-      <Tag type="multi-page" />
-      <Tag type="landing" />
-      <Tag type="wizytówka" />
-      <Tag type="e-commerce" />
-      <Tag type="branding" />
+    >
+      <div class="my-4 flex gap-4 px-8">
+        <Tag type="multi-page" />
+        <Tag type="landing" />
+        <Tag type="wizytówka" />
+        <Tag type="e-commerce" />
+        <Tag type="branding" />
+      </div>
+      <div class="hidden items-center gap-6 md:flex">
+        <div
+          class="flex aspect-square w-[75px] justify-center rounded-full bg-inblock"
+        >
+          <Image src="/figma.svg" alt="figma" width={20} height={30} />
+        </div>
+        <div
+          class="flex aspect-square w-[75px] justify-center rounded-full bg-inblock"
+        >
+          <Image
+            src="/adobe_cc.svg"
+            alt="adobe creative cloud"
+            width={39}
+            height={29}
+          />
+        </div>
+        <div
+          class="flex aspect-square w-[75px] justify-center rounded-full bg-inblock"
+        >
+          <Image src="/miro.svg" alt="miro" width={28} height={27} />
+        </div>
+      </div>
     </div>
-    <div class="hidden items-center gap-6 md:flex">
-      <div
-        class="flex aspect-square w-[75px] justify-center rounded-full bg-inblock"
-      >
-        <Image src="/figma.svg" alt="figma" width={20} height={30} />
-      </div>
-      <div
-        class="flex aspect-square w-[75px] justify-center rounded-full bg-inblock"
-      >
-        <Image
-          src="/adobe_cc.svg"
-          alt="adobe creative cloud"
-          width={39}
-          height={29}
-        />
-      </div>
-      <div
-        class="flex aspect-square w-[75px] justify-center rounded-full bg-inblock"
-      >
-        <Image src="/miro.svg" alt="miro" width={28} height={27} />
-      </div>
-    </div>
-  </div>
   </div>
 
   <section
     id="o-nas"
-    class="mx-8 max-w-6xl md:mx-auto md:mb-44 md:grid md:grid-cols-2 md:gap-6 md:text-[18px] md:leading-7"
+    class="mx-8 max-w-6xl md:mx-auto md:mb-44 md:grid md:grid-cols-2 md:gap-y-6 md:text-[18px] md:leading-7"
   >
     <h1 class="mb-10 text-[34px] md:mb-[70px] md:text-[64px]">O nas</h1>
     <div
-      class="mb-8 hidden overflow-hidden rounded-[20px] bg-block md:row-span-2 md:mb-0 md:block"
+      class="mb-8 hidden overflow-hidden rounded-[20px] bg-block md:row-span-2 md:mb-0 md:block lg:-ml-10 lg:min-w-[605px]"
     >
       <div class="relative h-[370px] w-full">
         <div
           class="absolute inset-0 left-[1px] h-full w-full bg-[url('/grid.png')]"
         >
         </div>
+        <div class="absolute inset-0 z-20 h-full w-full bg-block/70"></div>
+        <Image
+          class="absolute bottom-11 left-7 z-30"
+          src={"/o-nas/lupa2.svg"}
+          alt="lupa"
+          width={150}
+          height={150}
+        />
+        <Image
+          class="absolute left-44 top-16 z-30"
+          src={"/o-nas/linijka2.svg"}
+          alt="linijka"
+          width={115}
+          height={115}
+        />
+        <Image
+          class="absolute bottom-5 right-1/4 z-30"
+          src={"/o-nas/pedzel.svg"}
+          alt="pedzel"
+          width={175}
+          height={175}
+        />
+        <Image
+          class="absolute right-0 top-5 z-30"
+          src={"/o-nas/klik.svg"}
+          alt="kursor"
+          width={155}
+          height={155}
+        />
         <div
-          class="absolute inset-0 z-20 h-full w-full bg-gradient-to-t from-block from-20% to-block/70"
+          class="absolute inset-0 z-40 h-full w-full bg-gradient-to-t from-block/90"
         >
         </div>
       </div>
@@ -107,7 +136,7 @@ import Tag from "../components/Tag.astro";
       </p>
     </div>
     <div
-      class="mb-8 overflow-hidden rounded-[10px] bg-block md:mb-0 md:rounded-[20px]"
+      class="mb-8 overflow-hidden rounded-[10px] bg-block md:mb-0 md:max-w-[510px] md:rounded-[20px]"
     >
       <p
         class="max-w-[90%] px-5 pt-8 text-[18px] leading-[26px] md:px-10 md:pt-10"
@@ -119,14 +148,29 @@ import Tag from "../components/Tag.astro";
         prowadzone przez osoby ze znanych Polskich agencji.
       </p>
 
-      <div class="relative h-60 w-full">
+      <div class="relative -bottom-1 h-[279px] w-full md:h-60">
         <div
-          class="absolute inset-0 left-[1px] h-full w-full bg-[url('/grid.png')]"
+          class="absolute inset-0 -left-14 h-full w-[calc(100%_+_56px)] bg-[url('/grid.png')] md:left-[1px]"
         >
         </div>
         <div
           class="absolute inset-0 z-20 h-full w-full bg-gradient-to-b from-block from-20% to-block/70"
         >
+        </div>
+        <div
+          class="absolute left-4 top-14 z-20 flex h-[73px] w-[145px] items-center justify-center rounded-[10px] bg-inblock md:left-9"
+        >
+          Netguru
+        </div>
+        <div
+          class="absolute left-40 top-[127px] z-20 flex h-[73px] w-[145px] items-center justify-center rounded-[10px] bg-inblock md:left-[180px]"
+        >
+          Edisonda
+        </div>
+        <div
+          class="left absolute bottom-2 left-4 z-20 flex h-[73px] w-[145px] items-center justify-center rounded-[10px] bg-inblock md:left-[324px] md:top-14"
+        >
+          Miquido
         </div>
       </div>
     </div>
@@ -153,7 +197,7 @@ import Tag from "../components/Tag.astro";
           projektu oraz podjęcia pracy w zawodzie projektanta.
         </p>
 
-        <div class="md:text- mt-8 flex justify-end md:items-end">
+        <div class="mt-8 flex justify-end md:items-end">
           <a href=""
             >Zobacz projekty <Image
               src="/arrow-right-up.svg"
@@ -166,8 +210,47 @@ import Tag from "../components/Tag.astro";
         </div>
       </div>
     </div>
-    <div class="mb-8 rounded-[10px] bg-block px-5 py-8 md:hidden">
-      <p>
+    <div class="mb-8 overflow-hidden rounded-[10px] bg-block md:hidden">
+      <div class="relative h-[370px] w-full">
+        <div
+          class="absolute inset-0 left-[1px] h-full w-full bg-[url('/grid.png')]"
+        >
+        </div>
+        <div class="absolute inset-0 z-20 h-full w-full bg-block/70"></div>
+        <Image
+          class="absolute left-9 top-9 z-30"
+          src={"/o-nas/lupa2.svg"}
+          alt="lupa"
+          width={105}
+          height={105}
+        />
+        <Image
+          class="absolute right-[19%] top-[122px] z-30"
+          src={"/o-nas/linijka2.svg"}
+          alt="linijka"
+          width={80}
+          height={80}
+        />
+        <Image
+          class="absolute left-6 top-48 z-30"
+          src={"/o-nas/pedzel.svg"}
+          alt="pedzel"
+          width={122}
+          height={122}
+        />
+        <Image
+          class="absolute bottom-5 right-[8%] z-30"
+          src={"/o-nas/klik2.svg"}
+          alt="kursor"
+          width={108}
+          height={108}
+        />
+        <div
+          class="absolute inset-0 z-40 h-full w-full bg-gradient-to-t from-block/90"
+        >
+        </div>
+      </div>
+      <p class="px-5 pb-8">
         <span class="text-underlight">
           Nasi członkowie studiują na kierunkach związanych
         </span>
@@ -177,11 +260,11 @@ import Tag from "../components/Tag.astro";
       </p>
     </div>
     <div
-      class="mb-8 max-h-[450px] overflow-hidden rounded-[10px] bg-block md:col-span-2 md:mb-0 md:rounded-[20px]"
+      class="mb-8 overflow-hidden rounded-[10px] bg-block md:col-span-2 md:mb-0 md:rounded-[20px]"
     >
       <div class="md:flex">
         <Image
-          class="max-h-[300px] rounded-[10px] object-cover md:max-h-[450px] md:max-w-lg"
+          class="rounded-[10px] object-cover md:max-w-lg"
           src="/o-nas/2.webp"
           alt="projekty"
           width={2000}
@@ -204,7 +287,7 @@ import Tag from "../components/Tag.astro";
                 class="rounded-[10px] border border-white/30 bg-inblock px-7 py-4 lg:px-32 lg:py-7"
               >
                 <Image
-                  src={"/csux_long.svg"}
+                  src={"/o-nas/csux_long.svg"}
                   alt="csux"
                   width={263}
                   height={19}
@@ -212,7 +295,7 @@ import Tag from "../components/Tag.astro";
               </div>
             </div>
           </div>
-          <div class="px-5 pb-8 pt-8 md:px-10 lg:pt-0">
+          <div class="px-5 pt-8 md:px-10 lg:pt-0">
             <p class="md:max-w-[92%]">
               <span class="text-underlight">
                 Przyczyniamy się również do poszerzania wiedzy osób spoza
@@ -222,7 +305,7 @@ import Tag from "../components/Tag.astro";
               na których każdy ma możliwość zapoznać się z zawodem designera oraz
               porozmawiać z zawodowcami z wieloletnim doświadczeniem w branży.
             </p>
-            <div class="mt-8 flex justify-end">
+            <div class="my-8 flex justify-end md:mb-10">
               <a href=""
                 >Więcej <img
                   src="/arrow-right-up.svg"
@@ -336,7 +419,7 @@ import Tag from "../components/Tag.astro";
       </span>
     </div>
     <div
-      class="h-[333px] w-full bg-[url('/footer/footer_background.svg')] bg-cover bg-no-repeat p-11 lg:grid lg:h-[300px] lg:grid-cols-4 lg:gap-12 lg:py-[72px] lg:text-[18px]"
+      class="h-full w-full bg-[url('/footer/footer_background.svg')] bg-cover bg-no-repeat p-11 pb-2 lg:grid lg:grid-cols-4 lg:gap-12 lg:pt-[72px] lg:text-[18px]"
     >
       <div class="mb-11 flex justify-between lg:mb-0 lg:justify-center">
         <Image
