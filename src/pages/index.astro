@@ -41,7 +41,10 @@ import Tag from "../components/Tag.astro";
   </main>
 
   <div
-    class="mb-32 mt-8 flex justify-between overflow-auto md:mx-auto md:mb-44 md:mt-9 md:max-w-6xl"
+    class="relative z-20 -mt-9 mb-32 min-h-48 w-screen bg-background md:mb-44 lg:-mt-[186px]"
+  >
+    <div
+      class="flex justify-between overflow-auto py-4 md:mx-auto md:max-w-6xl md:py-12"
   >
     <div class="my-4 flex gap-4 px-8">
       <Tag type="multi-page" />
@@ -72,6 +75,7 @@ import Tag from "../components/Tag.astro";
         <Image src="/miro.svg" alt="miro" width={28} height={27} />
       </div>
     </div>
+  </div>
   </div>
 
   <section
@@ -416,6 +420,26 @@ import Tag from "../components/Tag.astro";
           width={70}
           height={13}
         />
+      </div>
+      <div class="col-span-full py-4 text-center text-[11px]">
+        <p>Projekt strony wykonany przez UXBerries.</p>
+        <p>
+          Wykonano przez
+          <a href="https://freely.digital" target="_blank"> freely.digital</a>,
+          <a href="https://dsieron.pl" target="_blank">
+            Dominik Sieroń
+            <Image
+              src="/arrow-right-up.svg"
+              alt="arrow"
+              width="11"
+              height="11"
+              class="-mt-1 inline-block h-[11px] w-[11px] align-middle"
+            />
+          </a>
+        </p>
+        <p>
+          &copy; {new Date().getFullYear()} UXBerries. All rights reserved.
+        </p>
       </div>
     </div>
   </footer>
