@@ -10,7 +10,7 @@ import Tag from "../components/Tag.astro";
 ---
 
 <Layout title="UXberries">
-  <main class="flex h-screen items-center justify-center overflow-x-hidden">
+  <main class="flex h-[90vh] items-center justify-center overflow-x-hidden">
     <div
       class="absolute inset-0 z-0 w-screen bg-[url('/grid.png')] bg-cover opacity-20"
     >
@@ -41,7 +41,7 @@ import Tag from "../components/Tag.astro";
   </main>
 
   <div
-    class="relative z-20 -mt-9 mb-32 min-h-48 w-screen bg-background md:mb-44 lg:-mt-[186px]"
+    class="relative z-20 -mt-9 mb-32 min-h-48 w-screen bg-background md:mb-44"
   >
     <div
       class="flex justify-between overflow-auto py-4 md:mx-auto md:max-w-6xl md:py-12"
@@ -80,7 +80,7 @@ import Tag from "../components/Tag.astro";
 
   <section
     id="o-nas"
-    class="mx-8 max-w-6xl md:mx-auto md:mb-44 md:grid md:grid-cols-2 md:gap-y-6 md:text-[18px] md:leading-7"
+    class="mx-8 mb-32 max-w-6xl md:mx-auto md:mb-44 md:grid md:grid-cols-2 md:gap-y-6 md:text-[18px] md:leading-7"
   >
     <h1 class="mb-10 text-[34px] md:mb-[70px] md:text-[64px]">O nas</h1>
     <div
@@ -139,7 +139,7 @@ import Tag from "../components/Tag.astro";
       class="mb-8 overflow-hidden rounded-[10px] bg-block md:mb-0 md:max-w-[510px] md:rounded-[20px]"
     >
       <p
-        class="max-w-[90%] px-5 pt-8 text-[18px] leading-[26px] md:px-10 md:pt-10"
+        class="px-5 pt-8 text-[18px] leading-[26px] md:max-w-[90%] md:px-10 md:pt-10"
       >
         Dbamy o jakość wykonywanych projektów,
         <span class="text-underlight">
@@ -153,22 +153,35 @@ import Tag from "../components/Tag.astro";
           class="absolute inset-0 -left-14 h-full w-[calc(100%_+_56px)] bg-[url('/grid.png')] md:left-[1px]"
         >
         </div>
+        <div class="absolute inset-0 z-20 h-full w-full bg-block/70"></div>
         <div
-          class="absolute inset-0 z-20 h-full w-full bg-gradient-to-b from-block from-20% to-block/70"
+          class="absolute inset-0 z-30 h-1/5 w-full bg-gradient-to-b from-block"
         >
         </div>
         <div
-          class="absolute left-4 top-14 z-20 flex h-[73px] w-[145px] items-center justify-center rounded-[10px] bg-inblock md:left-9"
+          class="absolute bottom-0 z-30 h-1/5 w-full bg-gradient-to-t from-block"
+        >
+        </div>
+        <div
+          class="absolute inset-0 z-30 h-full w-1/2 bg-gradient-to-r from-block/70"
+        >
+        </div>
+        <div
+          class="absolute right-0 top-0 z-30 h-full w-1/2 bg-gradient-to-l from-block/70"
+        >
+        </div>
+        <div
+          class="absolute left-4 top-4 z-20 flex h-[73px] w-[145px] items-center justify-center rounded-[10px] border border-white/30 bg-inblock md:left-9 md:top-14"
         >
           Netguru
         </div>
         <div
-          class="absolute left-40 top-[127px] z-20 flex h-[73px] w-[145px] items-center justify-center rounded-[10px] bg-inblock md:left-[180px]"
+          class="absolute left-40 top-[90px] z-20 flex h-[73px] w-[145px] items-center justify-center rounded-[10px] border border-white/30 bg-inblock md:left-[180px] md:top-[126px]"
         >
           Edisonda
         </div>
         <div
-          class="left absolute bottom-2 left-4 z-20 flex h-[73px] w-[145px] items-center justify-center rounded-[10px] bg-inblock md:left-[324px] md:top-14"
+          class="absolute bottom-11 left-4 z-20 flex h-[73px] w-[145px] items-center justify-center rounded-[10px] border border-white/30 bg-inblock md:left-[324px] md:top-14"
         >
           Miquido
         </div>
