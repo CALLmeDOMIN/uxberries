@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import EtapProjektu from "../components/EtapProjektu.astro";
 import Project from "../components/Project.astro";
 import ArriveSoon from "../components/ArriveSoon.astro";
+import EtapyProjektu from "../components/EtapyProjektu.tsx";
 
 import { Projects, etapyProjektu } from "../utils/data";
 import { Image } from "astro:assets";
@@ -356,11 +357,11 @@ import Tag from "../components/Tag.astro";
       </div>
     </div>
   </section>
-  <section id="etapy-projektu" class="mx-8 mb-32 md:mx-36 md:mb-44">
+  <section id="etapy-projektu" class="mx-8 mb-32 max-w-6xl md:mx-auto md:mb-44">
     <h1 class="mb-10 text-[34px] leading-[34px] md:text-[64px]">
       Etapy Projektu
     </h1>
-    <div class="flex snap-x snap-mandatory overflow-x-auto">
+    <div class="flex snap-x snap-mandatory overflow-x-auto lg:hidden">
       {
         etapyProjektu.map((tile) => (
           <div class="mr-4 shrink-0 snap-start first:ml-auto last:mr-auto">
@@ -369,8 +370,9 @@ import Tag from "../components/Tag.astro";
         ))
       }
     </div>
+    <EtapyProjektu className="hidden lg:block" client:load />
   </section>
-  <section id="portfolio" class="mx-8 md:mx-36 md:mb-32">
+  <section id="portfolio" class="mx-8 max-w-6xl md:mx-auto md:mb-32">
     <h1 class="mb-10 text-[34px] leading-[34px] md:text-[64px]">Portfolio</h1>
     {
       Projects.map((project) => {
@@ -383,7 +385,7 @@ import Tag from "../components/Tag.astro";
     }
   </section>
   <div
-    class="relative mx-auto mb-32 w-[300px] overflow-hidden rounded-[10px] bg-block px-5 py-10 md:mx-36 md:mb-44 md:w-auto md:rounded-[20px] md:px-24 md:py-[77px]"
+    class="relative mx-auto mb-32 w-[300px] max-w-6xl overflow-hidden rounded-[10px] bg-block px-5 py-10 md:mb-44 md:w-auto md:rounded-[20px] md:px-24 md:py-[77px]"
   >
     <div
       class="absolute inset-0 -top-5 left-[1px] h-full w-full bg-[url('/grid.png')]"
@@ -456,8 +458,16 @@ import Tag from "../components/Tag.astro";
       </span>
     </div>
     <div
-      class="h-full w-full bg-[url('/footer/footer_background.svg')] bg-cover bg-no-repeat p-11 pb-2 lg:grid lg:grid-cols-4 lg:gap-12 lg:pt-[72px] lg:text-[18px]"
+      class="relative h-full w-full bg-cover bg-no-repeat p-11 pb-2 lg:grid lg:grid-cols-4 lg:gap-12 lg:pt-[72px] lg:text-[18px]"
     >
+      <div
+        class="absolute inset-0 -z-10 w-full bg-gradient-to-t from-secondary-purple"
+      >
+      </div>
+      <div
+        class="absolute inset-0 -z-20 h-full w-full bg-[url('/footer/circles.svg')] bg-cover bg-center"
+      >
+      </div>
       <div class="mb-11 flex justify-between lg:mb-0 lg:justify-center">
         <Image
           src="/footer/uxberries_short_white.svg"
