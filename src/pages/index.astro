@@ -57,7 +57,13 @@ import Tag from "../components/Tag.astro";
         <div
           class="flex aspect-square w-[75px] justify-center rounded-full bg-inblock"
         >
-          <Image src="/figma.svg" alt="figma" width={20} height={30} />
+          <Image
+            src="/figma.svg"
+            alt="figma"
+            width={20}
+            height={30}
+            loading="eager"
+          />
         </div>
         <div
           class="flex aspect-square w-[75px] justify-center rounded-full bg-inblock"
@@ -67,12 +73,19 @@ import Tag from "../components/Tag.astro";
             alt="adobe creative cloud"
             width={39}
             height={29}
+            loading="eager"
           />
         </div>
         <div
           class="flex aspect-square w-[75px] justify-center rounded-full bg-inblock"
         >
-          <Image src="/miro.svg" alt="miro" width={28} height={27} />
+          <Image
+            src="/miro.svg"
+            alt="miro"
+            width={28}
+            height={27}
+            loading="eager"
+          />
         </div>
       </div>
     </div>
@@ -98,6 +111,7 @@ import Tag from "../components/Tag.astro";
           alt="lupa"
           width={150}
           height={150}
+          loading="eager"
         />
         <Image
           class="absolute left-44 top-16 z-30"
@@ -105,6 +119,7 @@ import Tag from "../components/Tag.astro";
           alt="linijka"
           width={115}
           height={115}
+          loading="eager"
         />
         <Image
           class="absolute bottom-5 right-1/4 z-30"
@@ -112,6 +127,7 @@ import Tag from "../components/Tag.astro";
           alt="pedzel"
           width={175}
           height={175}
+          loading="eager"
         />
         <Image
           class="absolute right-0 top-5 z-30"
@@ -119,6 +135,7 @@ import Tag from "../components/Tag.astro";
           alt="kursor"
           width={155}
           height={155}
+          loading="eager"
         />
         <div
           class="absolute inset-0 z-40 h-full w-full bg-gradient-to-t from-block/90"
@@ -236,6 +253,7 @@ import Tag from "../components/Tag.astro";
           alt="lupa"
           width={105}
           height={105}
+          loading="eager"
         />
         <Image
           class="absolute right-[19%] top-[122px] z-30"
@@ -243,6 +261,7 @@ import Tag from "../components/Tag.astro";
           alt="linijka"
           width={80}
           height={80}
+          loading="eager"
         />
         <Image
           class="absolute left-6 top-48 z-30"
@@ -250,6 +269,7 @@ import Tag from "../components/Tag.astro";
           alt="pedzel"
           width={122}
           height={122}
+          loading="eager"
         />
         <Image
           class="absolute bottom-5 right-[8%] z-30"
@@ -257,6 +277,7 @@ import Tag from "../components/Tag.astro";
           alt="kursor"
           width={108}
           height={108}
+          loading="eager"
         />
         <div
           class="absolute inset-0 z-40 h-full w-full bg-gradient-to-t from-block/90"
@@ -304,6 +325,7 @@ import Tag from "../components/Tag.astro";
                   alt="csux"
                   width={263}
                   height={19}
+                  loading="eager"
                 />
               </div>
             </div>
@@ -320,7 +342,7 @@ import Tag from "../components/Tag.astro";
             </p>
             <div class="my-8 flex justify-end md:mb-10">
               <a href=""
-                >Więcej <img
+                >Więcej <Image
                   src="/arrow-right-up.svg"
                   alt="arrow"
                   width="16"
@@ -382,6 +404,7 @@ import Tag from "../components/Tag.astro";
       alt="questionmark"
       width={180}
       height={180}
+      loading="eager"
     />
     <p
       class="relative z-50 w-[20ch] text-lg md:w-auto md:text-[26px] md:leading-8"
@@ -421,12 +444,13 @@ import Tag from "../components/Tag.astro";
         <button
           class="mx-auto rounded-[10px] bg-secondary-purple p-5 text-white md:m-0 md:p-6"
         >
-          <img
+          <Image
             width="22"
             height="22"
             src="/arrow-right-up.svg"
             class="h-4 w-4 rotate-45 align-middle md:h-6 md:w-6"
             alt="arrow"
+            loading="eager"
           />
         </button>
       </span>
@@ -468,12 +492,13 @@ import Tag from "../components/Tag.astro";
         <span class="lg:mb-10"></span>
         <a href="" class="relative font-medium">
           <span class="mr-1"> Zobacz na mapie </span>
-          <img
+          <Image
             src="/arrow-right-up.svg"
             alt="arrow"
             width="16"
             height="16"
             class="-mt-0.5 inline-block h-4 w-4 align-middle"
+            loading="eager"
           />
         </a>
       </p>

@@ -57,10 +57,10 @@ const Menu = () => {
         />
         <ul className="flex flex-col justify-evenly gap-12 text-center text-4xl font-medium text-main-purple">
           <li>
-            <a href="">O nas</a>
+            <a href="#o-nas">O nas</a>
           </li>
           <li>
-            <a href="">Portfolio</a>
+            <a href="#portfolio">Portfolio</a>
           </li>
           <li>
             <a href="">Kariera</a>
@@ -110,7 +110,7 @@ const Menu = () => {
           </div>
         </div>
       </div>
-    </span>
+    </div>
   );
 };
 

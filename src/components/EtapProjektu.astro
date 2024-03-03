@@ -21,6 +21,7 @@ const { title, image, desc } = Astro.props;
     alt="grid"
     width={1074}
     height={680}
+    loading="eager"
   />
   <div
     class="absolute inset-0 z-[15] h-full w-full bg-gradient-to-b from-block from-[1%] via-block/50 via-50% to-block to-70%"
@@ -32,6 +33,7 @@ const { title, image, desc } = Astro.props;
     alt={`${image}`}
     width={205}
     height={205}
+    loading="eager"
   />
   <p class="relative z-50 w-[20ch]">
     {
