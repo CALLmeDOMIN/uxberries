@@ -15,10 +15,10 @@ const Menu = () => {
   };
 
   return (
-    <span className="lg:hidden">
+    <div className="lg:hidden">
       <button
         onClick={toggleMenu}
-        className="absolute right-8 top-10 z-10 h-6 w-6"
+        className="absolute right-8 top-10 z-20 h-6 w-6"
       >
         {isOpen ? (
           <svg viewBox="0 0 80 80" width="24" height="24" fill="#533C96">
@@ -46,8 +46,8 @@ const Menu = () => {
         )}
       </button>
       <div
-        className={`absolute inset-0 h-screen w-screen flex-col items-center justify-between bg-white pb-20 pt-12 
-          ${isOpen ? "flex" : "hidden"}`}
+        className={`absolute inset-0 z-10 flex h-screen w-screen flex-col items-center justify-between bg-white pb-20 pt-12 transition-all ease-in-out
+          ${isOpen ? "opacity-100" : "opacity-0"}`}
       >
         <img
           src="/uxberries_long_purple.svg"
