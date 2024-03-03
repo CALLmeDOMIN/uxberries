@@ -1,10 +1,10 @@
 ---
 import { Image } from "astro:assets";
-import { type EtapProjektu } from "../utils/types";
+import { type EtapProjektuMobile } from "../utils/types";
 
-interface Props extends EtapProjektu {}
+interface Props extends EtapProjektuMobile {}
 
-const { title, image, desc } = Astro.props;
+const { title, type, desc } = Astro.props;
 ---
 
 <div
@@ -29,19 +29,13 @@ const { title, image, desc } = Astro.props;
   </div>
   <Image
     class="absolute left-[80px] top-[154px] z-20 h-[205px] w-[205px]"
-    src={`/etapy/${image}.svg`}
-    alt={`${image}`}
+    src={`/etapy/mobile/${type}.svg`}
+    alt={`${type}`}
     width={205}
     height={205}
     loading="eager"
   />
   <p class="relative z-50 w-[20ch]">
-    {
-      desc.map((line) => (
-        <>
-          {line} <br />
-        </>
-      ))
-    }
+    {desc}
   </p>
 </div>

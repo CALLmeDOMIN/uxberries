@@ -1,11 +1,8 @@
 ---
-import { Image } from "astro:assets";
-import { type Projekt } from "../utils/types";
 import Tag from "./Tag.astro";
+import { type ArriveSoon } from "../utils/types";
 
-interface Props {
-  title: string;
-}
+interface Props extends ArriveSoon {}
 
 const { title } = Astro.props;
 ---

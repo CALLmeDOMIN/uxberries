@@ -1,46 +1,14 @@
 import { useState } from "react";
-
-type Etap = "odkrywanie" | "projektowanie" | "testowanie" | "wdrazanie";
-
-type EtapElement = {
-  title: string;
-  description: string;
-};
-
-type EtapData = {
-  odkrywanie: EtapElement;
-  projektowanie: EtapElement;
-  testowanie: EtapElement;
-  wdrazanie: EtapElement;
-};
-
-const data: EtapData = {
-  odkrywanie: {
-    title: "Spotkamy się, żeby lepiej poznać Twoje cele i potrzeby",
-    description:
-      "Zrozumienie potrzeb oraz celów klienta jest podstawą do zaprojektowania odpowiedniego rozwiązania. Z tego też powodu, na początku spotkamy    się z Tobą, aby lepiej poznać Twój punkt widzenia, a także zaznajomić się                       z Twoimi wymaganiami. Następnie przeprowadzimy badania, które pozwolą nam lepiej zrozumieć Twoich odbiorców oraz poznać Twoich konkurentów.",
-  },
-  projektowanie: {
-    title:
-      "Zaprojektujemy Twój produkt zgodnie z zasadami User Centered Designu",
-    description:
-      "Projektowanie zorientowane na użytkownika umożliwia stworzenie kompleksowego produktu, który idealnie trafia w potrzeby i gusta odbiorców. Dzięki zastosowaniu tego podejścia projektowego, Twój produkt z pewnością zostanie ciepło przyjęty przez użytkowników. ",
-  },
-  testowanie: {
-    title: "Zweryfikujemy Twój nowy produkt z prawdziwymi użytkownikami",
-    description:
-      "Testowanie jest kluczem do stworzenia produktu skrojonego pod wymagania Twoje oraz Twoich odbiorców. Właśnie dlatego stawiamy na ciągłe testowanie projektu z użytkownikami oraz konsultowanie go z Tobą przez cały czas jego trwania. Natomiast wszelkie wykryte problemy od razu rozwiążemy, tak by gotowy produkt był nieskazitelny.",
-  },
-  wdrazanie: {
-    title:
-      "Na Twoje życzenie zajmiemy się również wdrożeniem gotowego produktu",
-    description:
-      "Radość z posiadania gotowego produktu to niesamowite uczucie, a zadowolenie z posiadania wdrożonego projektu jest tym większe. Z tego powodu na Twoje życzenie zajmiemy się również urzeczywistnieniem gotowego produktu. W tym celu skontaktujemy się ze specjalistami z branży IT, którzy przy zastosowaniu najnowocześniejszych technik i standardów sprawią, że Twój produkt zaistnieje   w cyfrowym świecie.",
-  },
-};
+import type { Etap, EtapData } from "../utils/types";
+import { etapyProjektu } from "../utils/data";
 
 const EtapyProjektu = ({ className }: { className: string }) => {
   const [etap, setEtap] = useState<Etap>("odkrywanie");
+
+  const data: EtapData = etapyProjektu.reduce((acc, curr) => {
+    acc[curr.type] = curr;
+    return acc;
+  }, {} as EtapData);
 
   return (
     <div className={className}>
@@ -116,7 +84,7 @@ const EtapyProjektu = ({ className }: { className: string }) => {
           <h1 className="relative z-50 max-w-[430px] text-3xl font-medium">
             {data[etap].title}
           </h1>
-          <p className="relative z-50 text-[18px]">{data[etap].description}</p>
+          <p className="relative z-50 text-[18px]">{data[etap].desc}</p>
         </div>
       </div>
     </div>

@@ -1,13 +1,14 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+
 import EtapProjektu from "../components/EtapProjektu.astro";
 import Project from "../components/Project.astro";
 import ArriveSoon from "../components/ArriveSoon.astro";
 import EtapyProjektu from "../components/EtapyProjektu.tsx";
-
-import { Projects, etapyProjektu } from "../utils/data";
-import { Image } from "astro:assets";
 import Tag from "../components/Tag.astro";
+
+import { projects, etapyProjektu } from "../utils/data";
 ---
 
 <Layout title="UXberries">
@@ -375,7 +376,7 @@ import Tag from "../components/Tag.astro";
   <section id="portfolio" class="mx-8 max-w-6xl md:mx-auto md:mb-32">
     <h1 class="mb-10 text-[34px] leading-[34px] md:text-[64px]">Portfolio</h1>
     {
-      Projects.map((project) => {
+      projects.map((project) => {
         return project.isArriveSoon === false ? (
           <Project {...project} />
         ) : (

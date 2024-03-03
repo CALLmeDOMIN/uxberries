@@ -27,7 +27,7 @@ const { image, tags, title, redirect, authors } = Astro.props;
     }
     <div class="w-full md:flex md:flex-col">
       <div class="mb-6 flex gap-x-4">
-        {tags.map((tag) => <Tag type={tag} />)}
+        {tags?.map((tag) => <Tag type={tag} />)}
       </div>
       {
         !authors && (
