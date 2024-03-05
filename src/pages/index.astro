@@ -12,13 +12,13 @@ import { projects, etapyProjektu } from "../utils/data";
 ---
 
 <Layout title="UXberries">
-  <main class="flex h-[80vh] items-center justify-center lg:h-[90vh]">
+  <main class="flex h-[688px] items-center justify-center">
     <div
-      class="absolute inset-0 z-0 h-[80vh] w-screen bg-[url('/grid.png')] bg-cover opacity-20"
+      class="absolute inset-0 z-0 h-[688px] w-screen bg-[url('/grid_main.png')] opacity-20"
     >
     </div>
     <div
-      class="absolute inset-0 z-[1] w-full bg-gradient-to-b from-main-purple via-main-purple/30"
+      class="via-secondary-purple/20% absolute inset-0 z-[1] h-[688px] w-full bg-gradient-to-b from-secondary-purple/70 from-0% via-secondary-purple/30 via-30%"
     >
     </div>
     <div
@@ -42,11 +42,9 @@ import { projects, etapyProjektu } from "../utils/data";
     </div>
   </main>
 
-  <div
-    class="relative z-[3] mb-24 min-h-[20vh] w-screen bg-background md:mb-44 md:min-h-48"
-  >
+  <div class="relative z-[3] mb-24 w-screen bg-background md:mb-44 md:min-h-48">
     <div
-      class="flex justify-between overflow-auto py-4 md:mx-auto md:max-w-6xl md:py-12"
+      class="flex justify-between overflow-auto py-4 md:py-12 xl:mx-auto xl:max-w-6xl"
     >
       <div class="my-4 flex gap-4 px-8">
         <Tag type="multi-page" />
@@ -95,7 +93,7 @@ import { projects, etapyProjektu } from "../utils/data";
 
   <section
     id="o-nas"
-    class="mx-8 mb-32 max-w-6xl lg:mx-auto lg:mb-44 lg:grid lg:grid-cols-2 lg:gap-y-6 lg:text-[18px] lg:leading-7"
+    class="mx-8 mb-32 lg:mb-44 lg:grid lg:grid-cols-2 lg:gap-y-6 lg:text-[18px] lg:leading-7 xl:mx-auto xl:max-w-6xl"
   >
     <h1 class="mb-10 text-[34px] lg:mb-[70px] lg:text-[64px]">O nas</h1>
     <div
@@ -360,7 +358,7 @@ import { projects, etapyProjektu } from "../utils/data";
   </section>
   <section
     id="etapy-projektu"
-    class="mx-8 mb-32 md:mx-auto md:mb-44 lg:max-w-6xl"
+    class="mx-8 mb-32 md:mb-44 xl:mx-auto xl:max-w-6xl"
   >
     <h1 class="mb-10 text-[34px] leading-[34px] md:text-[64px]">
       Etapy Projektu
@@ -376,7 +374,10 @@ import { projects, etapyProjektu } from "../utils/data";
     </div>
     <EtapyProjektu className="hidden lg:block" client:load />
   </section>
-  <section id="portfolio" class="mx-8 md:mx-auto md:mb-32 lg:max-w-6xl">
+  <section
+    id="portfolio"
+    class="mx-8 px-4 md:mb-32 lg:px-0 xl:mx-auto xl:max-w-6xl"
+  >
     <h1 class="mb-10 text-[34px] leading-[34px] md:text-[64px]">Portfolio</h1>
     {
       projects.map((project) => {
@@ -389,7 +390,7 @@ import { projects, etapyProjektu } from "../utils/data";
     }
   </section>
   <div
-    class="relative mx-auto mb-32 w-[300px] max-w-6xl overflow-hidden rounded-[10px] bg-block px-5 py-10 md:mb-44 md:w-auto md:rounded-[20px] md:px-24 md:py-[77px]"
+    class="relative mx-auto mb-32 w-[300px] overflow-hidden rounded-[10px] bg-block px-5 py-10 md:mx-8 md:mb-44 md:w-auto md:rounded-[20px] md:px-24 md:py-[77px] xl:mx-auto xl:max-w-6xl"
   >
     <div
       class="absolute inset-0 -top-5 left-[1px] h-full w-full bg-[url('/grid.png')]"
