@@ -46,8 +46,8 @@ const Menu = () => {
         )}
       </button>
       <div
-        className={`absolute inset-0 z-10 flex h-screen w-screen flex-col items-center justify-between bg-white pb-20 pt-12 transition-all ease-in-out
-          ${isOpen ? "opacity-100" : "opacity-0"}`}
+        className={`absolute inset-0 z-10  flex h-screen w-screen flex-col items-center justify-between bg-white pb-20 pt-12 transition-all ease-in-out
+          ${isOpen ? "visible opacity-100" : "invisible opacity-0"}`}
       >
         <img
           src="/uxberries_long_purple.svg"

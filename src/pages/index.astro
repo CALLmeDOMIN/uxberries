@@ -12,9 +12,9 @@ import { projects, etapyProjektu } from "../utils/data";
 ---
 
 <Layout title="UXberries">
-  <main class="flex h-[90vh] items-center justify-center">
+  <main class="flex h-[80vh] items-center justify-center lg:h-[90vh]">
     <div
-      class="absolute inset-0 z-0 w-screen bg-[url('/grid.png')] bg-cover opacity-20"
+      class="absolute inset-0 z-0 h-[80vh] w-screen bg-[url('/grid.png')] bg-cover opacity-20"
     >
     </div>
     <div
@@ -43,7 +43,7 @@ import { projects, etapyProjektu } from "../utils/data";
   </main>
 
   <div
-    class="relative z-[3] -mt-9 mb-24 w-screen bg-background md:mb-44 md:min-h-48"
+    class="relative z-[3] mb-24 min-h-[20vh] w-screen bg-background md:mb-44 md:min-h-48"
   >
     <div
       class="flex justify-between overflow-auto py-4 md:mx-auto md:max-w-6xl md:py-12"
@@ -95,11 +95,11 @@ import { projects, etapyProjektu } from "../utils/data";
 
   <section
     id="o-nas"
-    class="mx-8 mb-32 max-w-6xl md:mx-auto md:mb-44 md:grid md:grid-cols-2 md:gap-y-6 md:text-[18px] md:leading-7"
+    class="mx-8 mb-32 max-w-6xl lg:mx-auto lg:mb-44 lg:grid lg:grid-cols-2 lg:gap-y-6 lg:text-[18px] lg:leading-7"
   >
-    <h1 class="mb-10 text-[34px] md:mb-[70px] md:text-[64px]">O nas</h1>
+    <h1 class="mb-10 text-[34px] lg:mb-[70px] lg:text-[64px]">O nas</h1>
     <div
-      class="mb-8 hidden overflow-hidden rounded-[20px] bg-block md:row-span-2 md:mb-0 md:block lg:-ml-10 lg:min-w-[605px]"
+      class="mb-8 hidden overflow-hidden rounded-[20px] bg-block lg:row-span-2 lg:-ml-10 lg:mb-0 lg:block lg:min-w-[605px]"
     >
       <div class="relative h-[370px] w-full">
         <div
@@ -155,10 +155,10 @@ import { projects, etapyProjektu } from "../utils/data";
       </p>
     </div>
     <div
-      class="mb-8 overflow-hidden rounded-[10px] bg-block md:mb-0 md:max-w-[510px] md:rounded-[20px]"
+      class="mb-8 overflow-hidden rounded-[10px] bg-block lg:mb-0 lg:max-w-[510px] lg:rounded-[20px]"
     >
       <p
-        class="px-5 pt-8 text-[18px] leading-[26px] md:max-w-[90%] md:px-10 md:pt-10"
+        class="px-5 pt-8 text-[18px] leading-[26px] lg:max-w-[90%] lg:px-10 lg:pt-10"
       >
         Dbamy o jakość wykonywanych projektów,
         <span class="text-underlight">
@@ -167,9 +167,9 @@ import { projects, etapyProjektu } from "../utils/data";
         prowadzone przez osoby ze znanych Polskich agencji.
       </p>
 
-      <div class="relative -bottom-1 h-[279px] w-full md:h-60">
+      <div class="relative -bottom-1 h-[279px] w-full lg:h-60">
         <div
-          class="absolute inset-0 -left-14 h-full w-[calc(100%_+_56px)] bg-[url('/grid.png')] md:left-[1px]"
+          class="absolute inset-0 -left-14 h-full w-[calc(100%_+_56px)] bg-[url('/grid.png')] lg:left-[1px]"
         >
         </div>
         <div class="absolute inset-0 z-20 h-full w-full bg-block/70"></div>
@@ -190,24 +190,24 @@ import { projects, etapyProjektu } from "../utils/data";
         >
         </div>
         <div
-          class="absolute left-4 top-4 z-20 flex h-[73px] w-[145px] items-center justify-center rounded-[10px] border border-white/30 bg-inblock md:left-9 md:top-14"
+          class="absolute left-4 top-4 z-20 flex h-[73px] w-[145px] items-center justify-center rounded-[10px] border border-white/30 bg-inblock sm:left-9 sm:top-14"
         >
           Netguru
         </div>
         <div
-          class="absolute left-40 top-[90px] z-20 flex h-[73px] w-[145px] items-center justify-center rounded-[10px] border border-white/30 bg-inblock md:left-[180px] md:top-[126px]"
+          class="absolute left-40 top-[90px] z-20 flex h-[73px] w-[145px] items-center justify-center rounded-[10px] border border-white/30 bg-inblock sm:left-[180px] sm:top-[126px]"
         >
           Edisonda
         </div>
         <div
-          class="absolute bottom-11 left-4 z-20 flex h-[73px] w-[145px] items-center justify-center rounded-[10px] border border-white/30 bg-inblock md:left-[324px] md:top-14"
+          class="absolute bottom-11 left-4 z-20 flex h-[73px] w-[145px] items-center justify-center rounded-[10px] border border-white/30 bg-inblock sm:left-[324px] sm:top-14"
         >
           Miquido
         </div>
       </div>
     </div>
     <div
-      class="mb-8 rounded-[10px] bg-block md:col-span-2 md:mb-0 md:rounded-[20px]"
+      class="mb-8 rounded-[10px] bg-block lg:col-span-2 lg:mb-0 lg:rounded-[20px]"
     >
       <Image
         class="max-h-[278px] rounded-[10px] object-cover"
@@ -216,8 +216,8 @@ import { projects, etapyProjektu } from "../utils/data";
         width={2000}
         height={1333}
       />
-      <div class="md: px-5 py-8 md:flex md:justify-between md:px-10 md:py-10">
-        <p class="md:max-w-[62.5%]">
+      <div class="px-5 py-8 lg:flex lg:justify-between lg:px-10 lg:py-10">
+        <p class="lg:max-w-[62.5%]">
           <span class="text-underlight">
             Na początku każdego roku akademickiego
           </span>
@@ -229,7 +229,7 @@ import { projects, etapyProjektu } from "../utils/data";
           projektu oraz podjęcia pracy w zawodzie projektanta.
         </p>
 
-        <div class="mt-8 flex justify-end md:items-end">
+        <div class="mt-8 flex justify-end lg:items-end">
           <a href=""
             >Zobacz projekty <Image
               src="/arrow-right-up.svg"
@@ -242,7 +242,7 @@ import { projects, etapyProjektu } from "../utils/data";
         </div>
       </div>
     </div>
-    <div class="mb-8 overflow-hidden rounded-[10px] bg-block md:hidden">
+    <div class="mb-8 overflow-hidden rounded-[10px] bg-block lg:hidden">
       <div class="relative h-[370px] w-full">
         <div
           class="absolute inset-0 left-[1px] h-full w-full bg-[url('/grid.png')]"
@@ -296,17 +296,17 @@ import { projects, etapyProjektu } from "../utils/data";
       </p>
     </div>
     <div
-      class="mb-8 overflow-hidden rounded-[10px] bg-block md:col-span-2 md:mb-0 md:rounded-[20px]"
+      class="mb-8 overflow-hidden rounded-[10px] bg-block lg:col-span-2 lg:mb-0 lg:rounded-[20px]"
     >
-      <div class="md:flex">
+      <div class="lg:flex">
         <Image
-          class="rounded-[10px] object-cover md:max-w-lg"
+          class="rounded-[10px] object-cover lg:max-w-lg"
           src="/o-nas/2.webp"
           alt="projekty"
           width={2000}
           height={1333}
         />
-        <div class="md:w-full">
+        <div class="lg:w-full">
           <div class="relative hidden h-60 w-full lg:block">
             <div
               class="absolute inset-0 left-[1px] h-full w-full bg-[url('/grid.png')]"
@@ -332,8 +332,8 @@ import { projects, etapyProjektu } from "../utils/data";
               </div>
             </div>
           </div>
-          <div class="px-5 pt-8 md:px-10 lg:pt-0">
-            <p class="md:max-w-[92%]">
+          <div class="px-5 pt-8 lg:px-10 lg:pt-0">
+            <p class="lg:max-w-[92%]">
               <span class="text-underlight">
                 Przyczyniamy się również do poszerzania wiedzy osób spoza
                 naszego zespołu,
@@ -342,7 +342,7 @@ import { projects, etapyProjektu } from "../utils/data";
               na których każdy ma możliwość zapoznać się z zawodem designera oraz
               porozmawiać z zawodowcami z wieloletnim doświadczeniem w branży.
             </p>
-            <div class="my-8 flex justify-end md:mb-10">
+            <div class="my-8 flex justify-end lg:mb-10">
               <a href=""
                 >Więcej <Image
                   src="/arrow-right-up.svg"
@@ -358,7 +358,10 @@ import { projects, etapyProjektu } from "../utils/data";
       </div>
     </div>
   </section>
-  <section id="etapy-projektu" class="mx-8 mb-32 max-w-6xl md:mx-auto md:mb-44">
+  <section
+    id="etapy-projektu"
+    class="mx-8 mb-32 md:mx-auto md:mb-44 lg:max-w-6xl"
+  >
     <h1 class="mb-10 text-[34px] leading-[34px] md:text-[64px]">
       Etapy Projektu
     </h1>
@@ -373,7 +376,7 @@ import { projects, etapyProjektu } from "../utils/data";
     </div>
     <EtapyProjektu className="hidden lg:block" client:load />
   </section>
-  <section id="portfolio" class="mx-8 max-w-6xl md:mx-auto md:mb-32">
+  <section id="portfolio" class="mx-8 md:mx-auto md:mb-32 lg:max-w-6xl">
     <h1 class="mb-10 text-[34px] leading-[34px] md:text-[64px]">Portfolio</h1>
     {
       projects.map((project) => {
