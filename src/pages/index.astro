@@ -4,7 +4,6 @@ import { Image } from "astro:assets";
 
 import EtapProjektu from "../components/EtapProjektu.astro";
 import Project from "../components/Project.astro";
-import ArriveSoon from "../components/ArriveSoon.astro";
 import EtapyProjektu from "../components/EtapyProjektu.tsx";
 import Tag from "../components/Tag.astro";
 
@@ -14,7 +13,7 @@ import { projects, etapyProjektu } from "../utils/data";
 <Layout title="UXberries">
   <main class="flex h-[688px] items-center justify-center">
     <div
-      class="absolute inset-0 z-0 h-[688px] w-screen bg-[url('/grid_main.png')] opacity-20"
+      class="absolute inset-0 z-0 h-[688px] bg-[url('/grid_main.png')] opacity-20"
     >
     </div>
     <div
@@ -381,11 +380,7 @@ import { projects, etapyProjektu } from "../utils/data";
     <h1 class="mb-10 text-[34px] leading-[34px] md:text-[64px]">Portfolio</h1>
     {
       projects.map((project) => {
-        return project.isArriveSoon === false ? (
-          <Project {...project} />
-        ) : (
-          <ArriveSoon title={project.title} />
-        );
+        <Project {...project} />;
       })
     }
   </section>

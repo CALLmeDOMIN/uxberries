@@ -1,18 +1,9 @@
-type ProjektData = {
+export type Projekt = {
   title: string;
   tags: string[];
   image: string;
   redirect: string;
   authors: string[];
-};
-
-export type Projekt = Partial<ProjektData> & {
-  title: string;
-  isArriveSoon: boolean;
-};
-
-export type ArriveSoon = {
-  title: string;
 };
 
 export type Etap = "odkrywanie" | "projektowanie" | "testowanie" | "wdrazanie";

@@ -62,9 +62,6 @@ const Menu = () => {
           <li>
             <a href="#portfolio">Portfolio</a>
           </li>
-          <li>
-            <a href="">Kariera</a>
-          </li>
         </ul>
         <div>
           <div className="mb-11">

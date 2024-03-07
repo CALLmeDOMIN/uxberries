@@ -38,7 +38,6 @@ export const projects: Projekt[] = [
     image: "racing",
     authors: ["1", "2", "3", "4", "5", "6"],
     redirect: "https://google.com",
-    isArriveSoon: false,
   },
   {
     title: "Redesign strony Browaru Stu Mostów",
@@ -46,7 +45,6 @@ export const projects: Projekt[] = [
     image: "piwo",
     authors: ["3", "8", "11"],
     redirect: "https://google.com",
-    isArriveSoon: false,
   },
   {
     title: "Strona lekarza rodzinnego",
@@ -54,16 +52,5 @@ export const projects: Projekt[] = [
     image: "doktor",
     authors: ["10", "1", "9", "12"],
     redirect: "https://google.com",
-    isArriveSoon: false,
-  },
-  {
-    title: "Strona zespołu gamedev Mage's Tea",
-    tags: [],
-    isArriveSoon: true,
-  },
-  {
-    title: "Strona koła naukowego SpaceTeam AGH",
-    tags: [],
-    isArriveSoon: true,
   },
 ];
