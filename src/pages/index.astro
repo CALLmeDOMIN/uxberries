@@ -41,9 +41,9 @@ import { projects, etapyProjektu } from "../utils/data";
     </div>
   </main>
 
-  <div class="relative z-[3] mb-24 w-screen bg-background md:mb-44 md:min-h-48">
+  <div class="mb-24 bg-background md:mb-44 md:min-h-48">
     <div
-      class="flex justify-between overflow-auto py-4 md:py-12 xl:mx-auto xl:max-w-6xl"
+      class="flex justify-between overflow-auto py-4 md:py-12 xl:mx-auto xl:max-w-6xl "
     >
       <div class="my-4 flex gap-4 px-8">
         <Tag type="multi-page" />
@@ -379,9 +379,7 @@ import { projects, etapyProjektu } from "../utils/data";
   >
     <h1 class="mb-10 text-[34px] leading-[34px] md:text-[64px]">Portfolio</h1>
     {
-      projects.map((project) => {
-        <Project {...project} />;
-      })
+      projects.map((project) => <Project {...project} />)
     }
   </section>
   <div
