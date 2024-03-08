@@ -6,7 +6,7 @@ import Author from "./Author.astro";
 
 interface Props extends Projekt {}
 
-const { image, tags, title, redirect, authors } = Astro.props;
+const { title, tags, image, redirect, authors } = Astro.props;
 ---
 
 <div class="flex flex-col">
@@ -33,7 +33,7 @@ const { image, tags, title, redirect, authors } = Astro.props;
         !authors && (
           <div class="w-full">
             <div class="w-full items-center justify-between md:flex">
-              <a href={redirect} class="mb-6 text-[26px] font-medium leading-8">
+              <a href={redirect} class="mb-6 text-[26px] font-medium leading-8" target="_blank" title={redirect}>
                 {title}
               </a>
             </div>

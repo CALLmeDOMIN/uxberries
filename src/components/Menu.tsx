@@ -66,8 +66,9 @@ const Menu = () => {
         <div>
           <div className="mb-11">
             <a
-              href=""
+              href="mailto:uxberries@gmail.com"
               className="rounded-[10px] border-[1.5px] border-hover bg-hover/20 px-[18px] py-[10px] text-base text-main-purple"
+              title="Napisz do nas!"
             >
               uxberries@gmail.com
               <img
@@ -80,7 +81,11 @@ const Menu = () => {
             </a>
           </div>
           <div className="flex justify-center gap-[50px]">
-            <a href="https://www.facebook.com/UXberries/" title="Facebook">
+            <a
+              href="https://www.facebook.com/UXberries/"
+              title="Facebook"
+              target="_blank"
+            >
               <img
                 src="/facebook_purple.svg"
                 alt="facebook"
@@ -88,7 +93,11 @@ const Menu = () => {
                 height="36"
               />
             </a>
-            <a href="https://www.behance.net/uxberries" title="Behance">
+            <a
+              href="https://www.behance.net/uxberries"
+              title="Behance"
+              target="_blank"
+            >
               <img
                 src="/behance_purple.svg"
                 alt="behance"
@@ -100,6 +109,7 @@ const Menu = () => {
               href="https://pl.linkedin.com/company/uxberries"
               className="py-[1px]"
               title="LinkedIn"
+              target="_blank"
             >
               <img
                 src="/linkedin_purple.svg"
