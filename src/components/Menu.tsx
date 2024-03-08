@@ -80,7 +80,7 @@ const Menu = () => {
             </a>
           </div>
           <div className="flex justify-center gap-[50px]">
-            <a href="">
+            <a href="https://www.facebook.com/UXberries/" title="Facebook">
               <img
                 src="/facebook_purple.svg"
                 alt="facebook"
@@ -88,7 +88,7 @@ const Menu = () => {
                 height="36"
               />
             </a>
-            <a href="">
+            <a href="https://www.behance.net/uxberries" title="Behance">
               <img
                 src="/behance_purple.svg"
                 alt="behance"
@@ -96,7 +96,11 @@ const Menu = () => {
                 height="36"
               />
             </a>
-            <a href="" className="py-[1px]">
+            <a
+              href="https://pl.linkedin.com/company/uxberries"
+              className="py-[1px]"
+              title="LinkedIn"
+            >
               <img
                 src="/linkedin_purple.svg"
                 alt="linkedin"
