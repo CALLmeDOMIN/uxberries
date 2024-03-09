@@ -20,7 +20,7 @@ const EtapyProjektu = ({ className }: { className: string }) => {
           >
             <img
               src="/etapy/icons/odkrywanie.svg"
-              alt="odkrywanie"
+              alt="lupa"
               loading="lazy"
               width={20}
               height={20}
@@ -33,7 +33,7 @@ const EtapyProjektu = ({ className }: { className: string }) => {
           >
             <img
               src="/etapy/icons/projektowanie.svg"
-              alt="projektowanie"
+              alt="narzedzia"
               loading="lazy"
               width={20}
               height={20}
@@ -46,7 +46,7 @@ const EtapyProjektu = ({ className }: { className: string }) => {
           >
             <img
               src="/etapy/icons/testowanie.svg"
-              alt="testowanie"
+              alt="checkmark"
               loading="lazy"
               width={20}
               height={20}
@@ -59,7 +59,7 @@ const EtapyProjektu = ({ className }: { className: string }) => {
           >
             <img
               src="/etapy/icons/wdrazanie.svg"
-              alt="wdrażanie"
+              alt="klucz"
               loading="lazy"
               width={20}
               height={20}

@@ -56,10 +56,10 @@ const Menu = () => {
           height={23}
         />
         <ul className="flex flex-col justify-evenly gap-12 text-center text-4xl font-medium text-main-purple">
-          <li>
+          <li role="button" onClick={toggleMenu}>
             <a href="#o-nas">O nas</a>
           </li>
-          <li>
+          <li role="button" onClick={toggleMenu}>
             <a href="#portfolio">Portfolio</a>
           </li>
         </ul>
