@@ -15,7 +15,7 @@ const EtapyProjektu = ({ className }: { className: string }) => {
       <div className="flex gap-6">
         <div className="flex flex-col gap-4">
           <button
-            className={`flex w-64 gap-4 rounded-[10px] p-6 py-4 text-[18px] transition-all hover:bg-hover ${etap !== "odkrywanie" ? "opacity-50 hover:opacity-100" : "bg-inblock"}`}
+            className={`flex w-64 gap-4 rounded-[0.625rem] p-6 py-4 text-[1.125rem] transition-all hover:bg-hover ${etap !== "odkrywanie" ? "opacity-50 hover:opacity-100" : "bg-inblock"}`}
             onClick={() => setEtap("odkrywanie")}
           >
             <img
@@ -28,7 +28,7 @@ const EtapyProjektu = ({ className }: { className: string }) => {
             Odkrywanie
           </button>
           <button
-            className={`flex w-64 gap-4 rounded-[10px] p-6 py-4 text-[18px] transition-all hover:bg-hover ${etap !== "projektowanie" ? "opacity-50 hover:opacity-100" : "bg-inblock"}`}
+            className={`flex w-64 gap-4 rounded-[0.625rem] p-6 py-4 text-[1.125rem] transition-all hover:bg-hover ${etap !== "projektowanie" ? "opacity-50 hover:opacity-100" : "bg-inblock"}`}
             onClick={() => setEtap("projektowanie")}
           >
             <img
@@ -41,7 +41,7 @@ const EtapyProjektu = ({ className }: { className: string }) => {
             Projektowanie
           </button>
           <button
-            className={`flex w-64 gap-4 rounded-[10px] p-6 py-4 text-[18px] transition-all hover:bg-hover ${etap !== "testowanie" ? "opacity-50 hover:opacity-100" : "bg-inblock"}`}
+            className={`flex w-64 gap-4 rounded-[0.625rem] p-6 py-4 text-[1.125rem] transition-all hover:bg-hover ${etap !== "testowanie" ? "opacity-50 hover:opacity-100" : "bg-inblock"}`}
             onClick={() => setEtap("testowanie")}
           >
             <img
@@ -54,7 +54,7 @@ const EtapyProjektu = ({ className }: { className: string }) => {
             Testowanie
           </button>
           <button
-            className={`flex w-64 gap-4 rounded-[10px] p-6 py-4 text-[18px] transition-all hover:bg-hover ${etap !== "wdrazanie" ? "opacity-50 hover:opacity-100" : "bg-inblock"}`}
+            className={`flex w-64 gap-4 rounded-[0.625rem] p-6 py-4 text-[1.125rem] transition-all hover:bg-hover ${etap !== "wdrazanie" ? "opacity-50 hover:opacity-100" : "bg-inblock"}`}
             onClick={() => setEtap("wdrazanie")}
           >
             <img
@@ -67,7 +67,7 @@ const EtapyProjektu = ({ className }: { className: string }) => {
             Wdrażanie
           </button>
         </div>
-        <div className="relative flex min-h-[400px] flex-col justify-between overflow-hidden rounded-[20px] bg-block p-12 transition-all">
+        <div className="relative flex min-h-[25rem] flex-col justify-between overflow-hidden rounded-[1.25rem] bg-block p-12 transition-all">
           <div className="absolute inset-0 h-full w-full">
             <div className="absolute inset-0 left-6 h-full w-full bg-[url('/grid.png')]"></div>
             <div className="absolute inset-0 z-20 h-full w-full bg-block/70"></div>
@@ -84,7 +84,7 @@ const EtapyProjektu = ({ className }: { className: string }) => {
           <h1 className="relative z-50 max-w-[430px] text-3xl font-medium">
             {data[etap].title}
           </h1>
-          <p className="relative z-50 text-[18px]">{data[etap].desc}</p>
+          <p className="relative z-50 text-[1.125rem]">{data[etap].desc}</p>
         </div>
       </div>
     </div>

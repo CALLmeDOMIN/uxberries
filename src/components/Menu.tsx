@@ -52,8 +52,9 @@ const Menu = () => {
         <img
           src="/uxberries_long_purple.svg"
           alt="logo"
-          width={150}
-          height={23}
+          width={112}
+          height={17}
+          className="-mt-2"
         />
         <ul className="flex flex-col justify-evenly gap-12 text-center text-4xl font-medium text-main-purple">
           <li role="button" onClick={toggleMenu}>
@@ -67,7 +68,7 @@ const Menu = () => {
           <div className="mb-11">
             <a
               href="mailto:uxberries@gmail.com"
-              className="rounded-[10px] border-[1.5px] border-hover bg-hover/20 px-[18px] py-[10px] text-base text-main-purple"
+              className="rounded-[0.625rem] border-[1.5px] border-hover bg-hover/20 px-[1.125rem] py-[0.625rem] text-base text-main-purple"
               title="Napisz do nas!"
             >
               uxberries@gmail.com
@@ -76,11 +77,11 @@ const Menu = () => {
                 alt="arrow"
                 width="16"
                 height="16"
-                className="-mt-1 ml-[10px] inline-block h-4 w-4 align-middle"
+                className="-mt-1 ml-[0.625rem] inline-block h-4 w-4 align-middle"
               />
             </a>
           </div>
-          <div className="flex justify-center gap-[50px]">
+          <div className="flex justify-center gap-[3.125rem]">
             <a
               href="https://www.facebook.com/UXberries/"
               title="Facebook"
