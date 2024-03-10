@@ -43,7 +43,7 @@ import { projects, etapyProjektu } from "../utils/data";
 
   <div class="mb-24 bg-background md:mb-44 md:min-h-48">
     <div
-      class="flex justify-between overflow-auto py-4 md:py-12 xl:mx-auto xl:max-w-6xl "
+      class="flex justify-between overflow-auto py-4 md:py-12 xl:mx-auto xl:max-w-6xl"
     >
       <div class="my-4 flex gap-4 px-8">
         <Tag type="multi-page" />
@@ -54,7 +54,7 @@ import { projects, etapyProjektu } from "../utils/data";
       </div>
       <div class="hidden items-center gap-6 md:flex">
         <div
-          class="flex aspect-square w-[75px] justify-center items-center rounded-full bg-inblock"
+          class="flex aspect-square w-[75px] items-center justify-center rounded-full bg-inblock"
         >
           <Image
             src="/figma.svg"
@@ -65,7 +65,7 @@ import { projects, etapyProjektu } from "../utils/data";
           />
         </div>
         <div
-          class="flex aspect-square w-[75px] justify-center items-center rounded-full bg-inblock"
+          class="flex aspect-square w-[75px] items-center justify-center rounded-full bg-inblock"
         >
           <Image
             src="/adobe_cc.svg"
@@ -76,7 +76,7 @@ import { projects, etapyProjektu } from "../utils/data";
           />
         </div>
         <div
-          class="flex aspect-square w-[75px] justify-center items-center rounded-full bg-inblock"
+          class="flex aspect-square w-[75px] items-center justify-center rounded-full bg-inblock"
         >
           <Image
             src="/miro.svg"
@@ -94,7 +94,11 @@ import { projects, etapyProjektu } from "../utils/data";
     id="o-nas"
     class="mx-8 mb-32 lg:mb-44 lg:grid lg:grid-cols-2 lg:gap-y-6 lg:text-[1.125rem] lg:leading-7 xl:mx-auto xl:max-w-6xl"
   >
-    <h1 class="mb-10 text-[2.125rem] lg:mb-[4.375rem] lg:text-[4rem]">O nas</h1>
+    <h1
+      class="mb-10 text-[2.125rem] md:text-[4rem] md:leading-[3rem] lg:mb-[4.375rem]"
+    >
+      O nas
+    </h1>
     <div
       class="mb-8 hidden overflow-hidden rounded-[1.25rem] bg-block lg:row-span-2 lg:-ml-10 lg:mb-0 lg:block lg:min-w-[605px]"
     >
@@ -362,7 +366,9 @@ import { projects, etapyProjektu } from "../utils/data";
     id="etapy-projektu"
     class="mx-8 mb-32 md:mb-44 xl:mx-auto xl:max-w-6xl"
   >
-    <h1 class="mb-10 text-[2.125rem] leading-[2.125rem] md:text-[4rem]">
+    <h1
+      class="mb-10 text-[2.125rem] leading-[2.125rem] md:text-[4rem] md:leading-[3rem] lg:mb-[4.375rem]"
+    >
       Etapy Projektu
     </h1>
     <div class="flex snap-x snap-mandatory overflow-x-auto lg:hidden">
@@ -380,10 +386,12 @@ import { projects, etapyProjektu } from "../utils/data";
     id="portfolio"
     class="mx-8 px-4 md:mb-32 lg:px-0 xl:mx-auto xl:max-w-6xl"
   >
-    <h1 class="mb-10 text-[2.125rem] leading-[2.125rem] md:text-[4rem]">Portfolio</h1>
-    {
-      projects.map((project) => <Project {...project} />)
-    }
+    <h1
+      class="mb-10 text-[2.125rem] leading-[2.125rem] md:text-[4rem] md:leading-[3rem] lg:mb-[4.375rem]"
+    >
+      Portfolio
+    </h1>
+    {projects.map((project) => <Project {...project} />)}
   </section>
   <div
     class="relative mx-auto mb-32 w-[18.75rem] overflow-hidden rounded-[0.625rem] bg-block px-5 py-10 md:mx-8 md:mb-44 md:w-auto md:rounded-[1.25rem] md:px-24 md:py-[77px] xl:mx-auto xl:max-w-6xl"
@@ -441,18 +449,22 @@ import { projects, etapyProjektu } from "../utils/data";
         <div class="mb-10 h-1 w-full bg-secondary-purple md:m-0"></div>
       </div>
 
-      <a href="mailto:uxberries@gmail.com" class="relative z-10 mx-auto md:flex md:items-center md:justify-end" title="Napisz do nas!">
+      <a
+        href="mailto:uxberries@gmail.com"
+        class="relative z-10 mx-auto md:flex md:items-center md:justify-end"
+        title="Napisz do nas!"
+      >
         <button
           class="mx-auto rounded-[0.625rem] bg-secondary-purple p-5 text-white md:m-0 md:p-6"
         >
-            <Image
-              width="22"
-              height="22"
-              src="/arrow-right-up.svg"
-              class="h-4 w-4 rotate-45 align-middle md:h-6 md:w-6"
-              alt="arrow"
-              loading="eager"
-            />
+          <Image
+            width="22"
+            height="22"
+            src="/arrow-right-up.svg"
+            class="h-4 w-4 rotate-45 align-middle md:h-6 md:w-6"
+            alt="arrow"
+            loading="eager"
+          />
         </button>
       </a>
     </div>
@@ -493,9 +505,11 @@ import { projects, etapyProjektu } from "../utils/data";
         </div>
       </div>
       <p class="lg:flex lg:flex-col lg:text-left">
-        <a href="mailto:uxberries@gmail.com"
+        <a
+          href="mailto:uxberries@gmail.com"
           title="Napisz do nas!"
-          class="underline">
+          class="underline"
+        >
           uxberries@gmail.com
         </a>
         <br />
@@ -518,7 +532,11 @@ import { projects, etapyProjektu } from "../utils/data";
       <div class="hidden lg:block">
         <h1 class="mb-8">Zaobserwuj nas!</h1>
         <div class="grid grid-cols-3 place-content-between">
-          <a href="https://www.facebook.com/UXberries/" title="Facebook" target="_blank">
+          <a
+            href="https://www.facebook.com/UXberries/"
+            title="Facebook"
+            target="_blank"
+          >
             <Image
               alt="facebook logo"
               src="/footer/facebook.svg"
@@ -526,7 +544,11 @@ import { projects, etapyProjektu } from "../utils/data";
               height={25}
             />
           </a>
-          <a href="https://www.behance.net/uxberries" title="Behance" target="_blank">
+          <a
+            href="https://www.behance.net/uxberries"
+            title="Behance"
+            target="_blank"
+          >
             <Image
               alt="behance logo"
               src="/footer/behance.svg"
@@ -534,7 +556,11 @@ import { projects, etapyProjektu } from "../utils/data";
               height={25}
             />
           </a>
-          <a href="https://pl.linkedin.com/company/uxberries" title="Linkedin" target="_blank">
+          <a
+            href="https://pl.linkedin.com/company/uxberries"
+            title="Linkedin"
+            target="_blank"
+          >
             <Image
               alt="linkedin logo"
               src="/footer/linkedin.svg"
@@ -559,8 +585,18 @@ import { projects, etapyProjektu } from "../utils/data";
         <p>Projekt strony wykonany przez UXberries.</p>
         <p>
           Wykonano przez
-          <a href="https://freely.digital" target="_blank" title="freely.digital"> freely.digital</a>,
-          <a href="https://dsieron.pl" target="_blank" title="Dominik Sieroń, Portfolio">
+          <a
+            href="https://freely.digital"
+            target="_blank"
+            title="freely.digital"
+          >
+            freely.digital</a
+          >,
+          <a
+            href="https://dsieron.pl"
+            target="_blank"
+            title="Dominik Sieroń, Portfolio"
+          >
             Dominik Sieroń
             <Image
               src="/arrow-right-up.svg"
