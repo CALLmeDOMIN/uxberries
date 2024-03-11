@@ -11,58 +11,36 @@ const { title, tags, image, redirect, authors } = Astro.props;
 
 <div class="flex flex-col">
   <div class="flex flex-col md:flex-row md:gap-12">
-    {
-      image && (
-        <>
-          <Image
-            src={`/projects/${image}.webp`}
-            alt={image}
-            width={4504}
-            height={2092}
-            sizes="(max-width: 768px) 90vw, 700px"
-            class="mb-6 h-[12.5rem] w-full rounded-[0.625rem] object-cover md:mb-12 md:h-[325px] md:min-w-[50%] md:rounded-[1.25rem] lg:min-w-[68%]"
-          />
-        </>
-      )
-    }
+    <Image
+      src={`/projects/${image}.webp`}
+      alt={image}
+      width={4504}
+      height={2092}
+      sizes="(max-width: 768px) 90vw, 700px"
+      class="mb-6 h-[12.5rem] w-full rounded-[0.625rem] object-cover md:mb-12 md:h-[325px] md:min-w-[50%] md:rounded-[1.25rem] lg:min-w-[68%]"
+    />
     <div class="w-full md:flex md:flex-col">
       <div class="mb-6 flex gap-x-4">
-        {tags?.map((tag) => <Tag type={tag} />)}
+        {tags.map((tag) => <Tag type={tag} />)}
       </div>
-      {
-        !authors && (
-          <div class="w-full">
-            <div class="w-full items-center justify-between md:flex">
-              <a href={redirect} class="mb-6 text-[1.625rem] font-medium leading-8" target="_blank" title={redirect}>
-                {title}
-              </a>
-            </div>
-            <div class="mb-4 w-full" />
-          </div>
-        )
-      }
-      {
-        authors && (
-          <>
-            <a href={redirect} class="mb-6 text-[1.625rem] font-medium leading-8">
-              {title}{" "}
-              <Image
-                src="/arrow-right-up.svg"
-                alt="arrow"
-                width="24"
-                height="24"
-                class="-mt-1 inline-block h-6 w-6 align-middle"
-              />
-            </a>
-            <h1 class="mb-4">Autorzy:</h1>
-            <div class="relative mb-10 flex h-16">
-              {authors.map((author, i) => (
-                <Author name={author} element={i} />
-              ))}
-            </div>
-          </>
-        )
-      }
+      <a
+        href={redirect}
+        class="mb-6 text-[1.625rem] font-medium leading-8"
+        title={title}
+      >
+        {title}{" "}
+        <Image
+          src="/arrow-right-up.svg"
+          alt="arrow"
+          width="24"
+          height="24"
+          class="-mt-1 inline-block h-6 w-6 align-middle"
+        />
+      </a>
+      <h1 class="mb-4">Autorzy:</h1>
+      <div class="relative mb-10 flex h-16">
+        {authors.map((author, i) => <Author name={author} element={i} />)}
+      </div>
     </div>
   </div>
   <div class="mb-10 h-[0.125rem] w-full bg-inblock md:mb-12"></div>

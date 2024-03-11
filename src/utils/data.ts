@@ -37,20 +37,23 @@ export const projects: Projekt[] = [
     tags: ["multi-page", "wizytówka"],
     image: "racing",
     authors: ["1", "2", "3", "4", "5", "6"],
-    redirect: "https://google.com",
+    redirect:
+      "https://www.behance.net/gallery/167917973/Racing-Team-website-redesign",
   },
   {
     title: "Redesign strony Browaru Stu Mostów",
     tags: ["praktyka", "e-commerce"],
     image: "piwo",
     authors: ["3", "8", "11"],
-    redirect: "https://google.com",
+    redirect:
+      "https://www.behance.net/gallery/167186931/Craft-Beer-Website-redesign",
   },
   {
     title: "Strona lekarza rodzinnego",
     tags: ["praktyka", "wizytówka"],
     image: "doktor",
     authors: ["10", "1", "9", "12"],
-    redirect: "https://google.com",
+    redirect:
+      "https://www.behance.net/gallery/166545293/Mobile-webpage-for-medic",
   },
 ];
