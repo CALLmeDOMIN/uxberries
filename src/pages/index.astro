@@ -395,6 +395,22 @@ import { projects, etapyProjektu } from "../utils/data";
       Portfolio
     </h1>
     {projects.map((project) => <Project {...project} />)}
+    <a
+      href="https://www.behance.net/uxberries"
+      target="_blank"
+      title="Zobacz wszystkie projekty"
+      class="flex items-center justify-center text-lg"
+    >
+      Zobacz wszystkie projekty
+      <Image
+        src="/arrow-right-up.svg"
+        alt="arrow"
+        width="16"
+        height="16"
+        class="-mt-1 ml-1 inline-block h-4 w-4"
+        loading="eager"
+      />
+    </a>
   </section>
   <div
     class="relative mx-auto mb-32 w-[18.75rem] overflow-hidden rounded-[0.625rem] bg-block px-5 py-10 md:mx-8 md:mb-44 md:w-auto md:rounded-[1.25rem] md:px-24 md:py-[77px] xl:mx-auto xl:max-w-6xl"
